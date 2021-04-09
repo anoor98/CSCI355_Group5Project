@@ -1,0 +1,42 @@
+Meeting one Monday 3/8/21
+Group 5 Project
+
+-Basically we create a webform form of the particular documents we have been assigned.
+-Students should be able to fill out these forms and have restricted acces to parts of the form that they are not suppose to fill in
+-Validate inputs for particalar actor/parties using javascript and backend coding
+-(Aliem) will drop an old file that will help with creating the web form
+-What do we know?
+	-HTML & CSS(Front-end web development for making pages and form)
+	-Javascript(More control over front end and use for validation)
+	-Look at Assignments for guidance of projects i.e Assignment
+-Brainstorm
+	-Other possible pages
+	-what will oter actor need view of/access to
+Page Ideas:
+	-Login page
+	-Form Page
+	-General Overview Page
+	-Logout Successful Page
+	-Status of form/verification page
+
+Role Assignments:
+	-Aliem
+	-Arooj
+	-Anthony
+	-King
+	-Md Akroam
+	-Ensar
+
+Platform for sharing: Github
+	-Aliem(anoor98)(aliemanoor@gmail.com)
+	-Arooj
+	-Anthony
+	-King(https://github.com/MLtoU)(kingman.chan66@qmail.cuny.edu)
+	-Md Akroam
+	-Ensar(https://github.com/ensardogrusoz)(kaandogrusoz00@gmail.com)
+
+Questions
+-What does it mean by "validate with javascript"?
+-How will the work be divided? Who will work on front-end and backend php,html,css,javascript etc
+-Aunthentication, how do we do it?
+-Ask about which pages of the form we are using and which ones we are not

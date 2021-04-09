@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>City University Residency Form</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="pg2.css">
+</head>
+<body>
+	<div>
+		<h1 class="text-center">CITY UNIVERSITY RESIDENCY FORM</h1>
+		<div class="row row-cols-1 row-cols-md-3 row-cols-lg-3">
+		<div class="col-lg-4 col-12">
+			<label for="last">1. Last Name:</label>
+			<input type="text" name="last">
+		</div>
+		
+		<div class="col-lg-4 col-12">
+			<label for="first">First Name:</label>
+			<input type="text" name="first">	
+		</div>
+		
+		<div class="col-lg-4 col-12">
+			<label for="middle">Middle Initial:</label>
+			<input type="text" name="middle">	
+		</div>
+		<!-- </div> -->
+
+		<!-- <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5"> -->
+		<div class="col-lg-4 col-12">
+			<label for="id">Student Id No.:</label>
+			<input type="text" name="id">
+		</div>
+		
+		<div class="col-lg-4 col-12">
+			<label for="DoB">Date of Birth:</label>
+			<input type="text" name="DoB">	
+		</div>
+		
+		<div class="col-lg-4 col-12">
+			<label for="phone">Phone Number:</label>
+			<input type="text" name="phone">	
+		</div>
+		</div>
+
+		<div class="radios row  row-cols-md-2 row-cols-lg-2">
+			<div class="col-xl-4 col-lg-6 col-md-6">
+				<label for="citizen">2. Are you a U.S. citizen?</label>
+				<input type="radio" id="radio-1" name="citizen" value="val-1"> Yes
+				<input type="radio" id="radio-2" name="citizen" value="val-2"> No
+			</div>
+		
+			<div class="col-xl-4 col-lg-6 col-md-6">
+				<label for="alien">Are you a permanent resident alien?</label>
+				<input type="radio" id="radio-1" name="alien" value="val-1"> Yes
+				<input type="radio" id="radio-2" name="alien" value="val-2"> No
+			</div>
+		</div>
+
+		<div>
+			<label for="address">3. Current Address:</label>
+			<input type="text" name="address">	
+		</div>
+
+		<label for="list">4. List below all your addresses, including temporary addresses and summer addresses during the past 12 months, starting from your current address and working backwards</label>
+		<br>
+		
+			<table class="table">
+				<thead>
+					<tr>
+						<th>From</th>
+						<th>To</th>
+						<th>Complete Address</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="text" name="from-1" placeholder="Month/Day/Year"></td>
+						<td><input type="text" name="to-1" placeholder="Month/Day/Year"></td>
+						<td><input type="text" class="addy" name="addy-1" placeholder="Street City State Zip"></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="from-2" placeholder="Month/Day/Year"></td>
+						<td><input type="text" name="to-2" placeholder="Month/Day/Year"></td>
+						<td><input type="text" class="addy" name="addy-2" placeholder="Street City State Zip"></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="from-3" placeholder="Month/Day/Year"></td>
+						<td><input type="text" name="to-3" placeholder="Month/Day/Year"></td>
+						<td><input type="text" class="addy" name="addy-3" placeholder="Street City State Zip"></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="from-4" placeholder="Month/Day/Year"></td>
+						<td><input type="text" name="to-4" placeholder="Month/Day/Year"></td>
+						<td><input type="text" class="addy" name="addy-4" placeholder="Street City State Zip"></td>
+					</tr>
+				</tbody>
+		  </table>	
+		
+		<div>
+			<label for="parents">5. Parents' permanent address: </label>
+			<input id="parents" name="parents"></input>
+		</div>
+		
+		<div class="radios">
+			<label for="age">6. Are you under the age of 18?</label>
+			<input type="radio" id="radio-1" name="age" value="val-1"> Yes
+			<input type="radio" id="radio-2" name="age" value="val-2"> No	
+		</div>
+		
+		<div class="radios">
+			<label for="guardian">If yes, does anyone other than your parents serve as your legal guardian?</label>
+			<input type="radio" id="radio-1" name="guardian" value="val-1"> Yes
+			<input type="radio" id="radio-2" name="guardian" value="val-2"> No	
+		</div>		
+		
+		<div>
+
+		</div>
+		<label for="naa">If yes, what is the name and address?</label>
+		<input id="source" name="naa"></input>
+		<div>
+			
+		</div>
+		<label for="source">7. What is the source of your support?</label>
+		<input id="source" name="source"></input>
+		<div class="radios">
+			<label for="resident-income">8. Did you file a New York City/State resident income tax return during the past 12 months?</label>
+			<input type="radio" id="radio-1" name="resident-income" value="val-1"> Yes
+			<input type="radio" id="radio-2" name="resident-income" value="val-2"> No	
+		</div>
+		
+		<div class="radios">
+			<label for="federal-income">9. Did you file a Federal income tax return during the past 12 months?</label>
+			<input type="radio" id="radio-1" name="federal-income" value="val-1"> Yes
+			<input type="radio" id="radio-2" name="federal-income" value="val-2"> No	
+		</div>
+		
+		<div class="radios">
+			<label for="apply">10. Have you applied for any financial aid, scholarshops, or other benefits provided under the laws of the State of New York or the United States?</label>
+			<input type="radio" id="radio-1" name="apply" value="val-1"> Yes
+			<input type="radio" id="radio-2" name="apply" value="val-2"> No	
+		</div>
+		
+		<div>
+			<label for="benefits">If yes, specify and indicate what benefits you are receiving.</label>
+			<input id="benefits" name="benefits"></input>	
+		</div>
+		
+		<div class="radios">
+			<label for="intend">11. Do you presently intend to permanently live in New York City or New York State?</label>
+			<input type="radio" id="radio-1" name="intend" value="val-1"> Yes
+			<input type="radio" id="radio-2" name="intend" value="val-2"> No	
+		</div>
+		
+		
+		<div>
+			<label for="uncertain">If uncertain, please explain:</label>
+			<input id="uncertain" name="uncertain"></input>	
+		</div>
+		
+
+		<div>
+			<p>I certify that I am not withholding any documetation relating to my immigration status that I intend to remain in New York State permanently</p>
+			<p>I understand that if I provide false information or withhold relevant information in order to obtain residency status, The City University may revoke its determination of in-state residency, and that I will owe non-resident tuition  to the University for each semester or session that I have attended under these circumstances. I also understand that I may be subject to disciplinary action.</p>
+			<p>The above statements are true and correct to the best of my knowledge.</p>	
+		</div>
+		
+		<div>
+			<label for="date">Date:</label>
+			<input type="text" name="date">	
+		
+			<label for="signature">Student Signature:</label>
+			<input type="text" name="signature">	
+		</div>
+
+		
+		<div>
+		<p><u>PLEASE NOTE: YOU HAVE A RIGHT TO APPEAL A NON-NEW YORK CITY/STATE RESIDENCY DETERMINATION</u></p>
+		<p>If you wish to appeal, you must notify the Registrar's Office (or other designated college appeal office) in writing within ten days of being notified that you have been determined to be a non-resident. At that time you may submit a statement to the Registrar (or other designated official) indicating why you disagree with the College's decision. The Registrar (or other designated official) will submit the City University Residency Form, copies of all documentation provided by you and any statement made by you, along with the College's determination, to the University's Office of the Vice Chancellor for Legal Affairs and General Counsel</p>	
+		</div>
+		
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
