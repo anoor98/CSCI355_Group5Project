@@ -1,81 +1,136 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Welcome</title>
 
-<style>
-body
-{
-background-color:#72C1FA;
-padding-top: 50px;
-padding-right: 50px;
-padding-bottom: 50px;
-padding-left: 50px;
-}
-.welcome {		
-  text-align:center;
-  color: black;
-  font-family: Lucida Handwriting;
-  font-size: 50px;
-}
-.button {
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  font-weight: bold;
-}
-.button1:hover {
-  background-color: gray;
-  color: white;
-}
-.button2:hover {
-  background-color: gray;
-  color: white;
-}
-.button3:hover {
-  background-color: gray;
-  color: white;
-}
+      <style>
+      body
+      {
+        font-family: 'Mukta', sans-serif;
+        margin: 0;
+        padding: 0%;
+      background-color:#ffffff;
+      }
+      .topnav {
+        background-color: rgb(67, 116, 221);
+        overflow: hidden;
+      }
 
-.button1{background-color: Red;}
-.button2 {background-color: Red;}
-.button3 {background-color: Red;}  
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
 
-</style>
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
 
-</head>
+      .topnav .icon {
+        display: none;
+      }
+      @media screen and (max-width: 600px) {
+        .topnav a {display: none;}
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
 
-<body>
-	
-		<div>
-		<img src="images/QcBanner.png" alt="Banner" style="width:100%">
-		</div>
-		
-			<div class="welcome">
-  			<h1><i>Welcome</i></h1>
-			</div>
-			
-		<div>
-				
-		<button class="button button1"><a href="C:/Users/basit/OneDrive/Desktop/Welcome%20Page/Student.html">Student</a></button>
-			
-		<button class="button button2">Registrar</button>
-		
-		<button class="button button3">Admin</button>
-		</div>
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive a.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+      .footer p{
+        text-align: center;
+      }
+      #banner{
+        width: 20%;
+      }
+      .banner{
+        background-color: white;
+        margin-top: 10px;
+      }
+      .welcome {		
+        text-align:center;
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+      }
 
-				<p><div>
-				<img src="images/Welcome.jpg" alt="Welcome" style="width:100%">
-				</div></p>
-		<div >
-		  <p style= text-align:center ; ><b>Queens College, CUNY | 65-30 Kissena Boulevard | Flushing, New York 11367-1597</b></p>
-		</div>
+      .button {
+        /* border: none; */
+        background-color: #65a6fc;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        display: block;
+        font-size: 16px;
+        margin: 10px;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .button:hover {
+        background-color: #4d7dbb; /* Green */
+        color: white;
+      }
+      </style>
+      <!-- google font -->
+      <link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 
+    <body>
+      <div>
+        <!-- navbar -->
+        <div class="topnav" id="myTopnav">
+          <a href="#home" class="active">Home</a>
+          <a href="#news">Fill Form</a>
+          <a href="#contact">Database</a>
+          <a href="#about">Form Aprovals</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <!-- navbar end -->
+        <div class="banner">
+          <img id="banner" src="images/QcBanner.jpeg" alt="Banner">
+        </div>
+        
+        <div class="welcome">
+          <h1>Welcome</h1>
 
-</body>
-</html>
+        </div>
+          
+        <div>
+        <button class="button button1">Student: Fill out form</button>
+          
+        <button class="button button2">Registrar: View forms</button>
+        
+        <button class="button button3">Admin: View database</button>
+        </div>
+
+        <div class="footer">
+          <p><b>Queens College, CUNY | 65-30 Kissena Boulevard | Flushing, New York 11367-1597</b></p>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+    </body>
+  </html>
