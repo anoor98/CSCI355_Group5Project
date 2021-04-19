@@ -1,0 +1,10 @@
+CREATE TABLE LOGINS (	
+    USERNAME varchar(6) NOT NULL PRIMARY KEY, 
+	PASS_WORD varchar(40) NOT NULL, 
+	LOGIN_TYPE varchar(40) NOT NULL, 
+	EMPLID INT(8) NOT NULL,
+	FIRST_NAME varchar(40) NOT NULL,
+	LAST_NAME varchar(40) NOT NULL,
+    MIDDLE_NAME varchar(40),
+    FORM_STATUS varchar(40)
+);
