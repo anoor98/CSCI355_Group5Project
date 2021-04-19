@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body
+      {
+      margin:
+      50px;
+      }
+  
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 150px; 
+  }
+  
+  .officeuse{
+  text-align: center;
+  }
