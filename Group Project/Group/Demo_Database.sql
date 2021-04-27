@@ -8,6 +8,13 @@ CREATE TABLE LOGINS (
     -- MIDDLE_NAME varchar(40),
 	FORM_STATUS varchar(40)
 );
+
+INSERT INTO LOGINS VALUES ('Jon.Doe11@qmail.cuny.edu', '11111111', 'Student', '11111111', 'Not Submitted');
+INSERT INTO LOGINS VALUES ('Jane.Doe11@qmail.cuny.edu', '22222222', 'Student', '22222222', 'Not Submitted');
+INSERT INTO LOGINS VALUES ('Zach.Gal33@qmail.cuny.edu', '33333333', 'Bursar', '33333333', NULL);
+INSERT INTO LOGINS VALUES ('Zoe.Gal44@qmail.cuny.edu', '44444444', 'Bursar', '44444444', NULL);
+INSERT INTO LOGINS VALUES ('Zom.Bie55@qmail.cuny.edu', '55555555', 'Admin', '55555555', NULL);
+
 SELECT *
 FROM LOGINS;
 
