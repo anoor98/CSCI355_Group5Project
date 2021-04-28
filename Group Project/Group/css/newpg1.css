@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 10px;
+
+  }
+  
+  body
+      {
+      margin:
+      50px;
+      }
+  
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 150px; 
+  }
+  
+  .officeuse{
+  text-align: center;
+  }
+ol.a{
+	list-style-type:
+	decimal;
+}
+	
+img{
+	margin-bottom:
+	10px;
+	margin-top:
+	20px;
+}
+	
+h1{
+	margin-top:
+	-20px;
+	margin-bottom:
+	50px;
+	text-align:
+	center;
+	border-bottom:
+	3px;
+	font-size:
+	50px;
+}
+	
+body{
+	margin:
+	30px;
+}
+	
+	
+
+	
+.card1 {
+	margin-bottom:
+	30px;
+}
+	
+.signature{
+	padding-left:
+	180px;
+	padding-bottom:
+	30px;
+}
+	
+.footer{
+	text-align:
+	center;
+}
+	
+.info {
+    padding-left:
+	0px;
+	margin-bottom:
+	30px;
+}
+	
+.notary {
+
+	padding:
+	30px;
+	margin-bottom:
+	30px;
+	background-color: gray;
+}
