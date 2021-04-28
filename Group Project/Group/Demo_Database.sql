@@ -16,9 +16,8 @@ SELECT *
 FROM LOGINS;
 
 /*
-3 tables for 3 different forms
+1 table for 3 different forms
 all connect with a foriegn key that connects to the student
-each table would have a row corresponding to the information given
 */
 CREATE TABLE PAGES (	
 	-- PG 1
