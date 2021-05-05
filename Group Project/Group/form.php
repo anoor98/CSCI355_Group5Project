@@ -537,19 +537,18 @@
 					<p>OF<input placeholder="Month" name="month" type='text' style='border:none;border-bottom:black solid 1px' placeholder="Season" required> , 20 <input name="year" placeholder="Year" type='text' style='border:none;border-bottom:black solid 1px'></p>
 					<p><input name="stamp" placeholder="Stamp" type='text' style='border:none;border-bottom:black solid 1px' required>NOTRAY PUBLIC </p>
 				</div>
-			</div>
+			
 
 			<!--Submit Form button-->
 			<div class="Submit nav justify-content-center">
 				<p><a href="pgLanding.html"><b>Submit form!</b>></p>
-			</div>
 			</div>
 
 			<div >
 				<p style= text-align:center ; ><b>Queens College, CUNY | 65-30 Kissena Boulevard | Flushing, New York 11367-1597</b></p>
 			</div>
 			
-			</div>
+		</div>
 
 		</form>
 	</div>
