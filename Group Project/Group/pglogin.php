@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/login.css">
     <title>Login Page</title>
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
-	<!-- Google fonts -->
-	<link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+        <!-- Google fonts -->
+        <link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
 
 
 </head>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="wthree-field">
-                        <button type="submit" class="btn">Get Started</button>
+                        <button name="login"  type="submit" class="btn">Get Started</button>
                     </div>
                 </form>
             </div>
@@ -39,3 +39,4 @@
     <script src="index.js"></script>
 </body>
 </html>
+

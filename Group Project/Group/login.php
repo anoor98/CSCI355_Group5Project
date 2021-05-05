@@ -14,20 +14,32 @@
         if (mysqli_connect_error()){
             die('Connect Error('. mysqli_connect_errno(). ')'. mysqli_connect_error());
         } 
-	    else {
-            echo "connected to database";
-            $sql = "SELECT USERNAME, PASS_WORD FROM LOGINS where USERNAME =  '$username' and PASS_WORD = '$password'";
-            $result	= $mysqli->query($sql);
-            while($row = $results->fetch_assoc());
-                if ($row['USERNAME'] == $username && $row['PASS_WORD'] == $password){
-                    echo "Login Success";
+	else {
+                 
+                 $_SESSION['username'] = $username;
+                echo "failed";
+                if (isset($_SESSION["username"])) {
+                        $location_redirect = "pgLanding.php";
+                } else {
+                        echo "failed";
+                        $location_redirect = "pglogin.php";
+            }
 
-                }else{
-                    echo "Failed Login";
-                }
-	    }
+            header("location: $location_redirect");
+            //$sql = "SELECT USERNAME, PASS_WORD FROM LOGINS where USERNAME =  '$username' and PASS_WORD = '$password'";
+            //$result   = $mysqli->query($sql);
+            //while($row = $results->fetch_assoc());
+              //  if ($row['USERNAME'] == $username && $row['PASS_WORD'] == $password){
+                //    echo "Login Success";
+
+                //}else{
+                  //  echo "Failed Login";
+               //}
+            //}
+        }
     }else {
 	echo " All fields are required";
         die();
     }
 ?>
+
