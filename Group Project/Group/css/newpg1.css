@@ -4,6 +4,9 @@
     margin-top: 0;
 
   }
+  ol > li::marker {
+    font-weight: bold;
+  }
 
 
 .topnav {
@@ -111,4 +114,18 @@ body{
 	margin-bottom:
 	30px;
 	background-color: gray;
+}
+
+.btn1{
+  /* border: none; */
+  background-color: #65a6fc;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  margin: 10px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 }

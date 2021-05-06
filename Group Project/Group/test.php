@@ -15,22 +15,40 @@ echo $_SESSION['username'] ?? 'empty';
 	<div class="page1">
 		 
 		
-			<form action="formSubmit.php" method="POST">
+			<form action="testSubmit.php" method="POST">
 		
                 <!--Office Checkboxes/Header-->
-
-                <div >
-                    <h1 style=text-align:center>  Verification of Status for Tuition Determination</h1>
-                </div>
-                
-                        <!--Student Info-->
-                <div class="nav justify-content-center">
-
-                        Name: <input name="Name" type='text' style='border:none;border-bottom:black solid 1px'>
-                        EMPLID<input name="id" type='test' style='border:none;border-bottom:black solid 1px' >
-                
-                </div>
-                <div class="wthree-field">
+                <div class = options>
+			<label>
+				<b>Immigration Status:</b> These items will determine if you are in an eligible immigration status for consideration of the lower tuition rate:
+			</label>
+                                                       </div>
+			<!--Immigration Status Options-->
+			<div class="ISOptions">
+			<label>
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Permanent residents">
+				Permanent residents must submit their Alien Registration Card (green card) or passport and I-94 Card with I-551 stamp.<br>
+			</label>
+			<br>
+			<label>
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Immigrant aliens pending">
+				Immigrant aliens pending permanent residency status and non-immigrant aliens must submit their passport and I-94 Card.<br>
+			</label>
+			<br>
+			<label>
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="U.S. citizen">
+				Proof of U.S. citizenship—U.S. passport, birth certificate, or naturalization papers.<br>
+			</label>
+			<br>
+			<label>
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Refugee/Asylum Granted">
+				“Refugee/Asylum Granted” stamped on passport or I-94 Card.<br>
+			</label>
+			<br>
+			<label>
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Non-immigrant alien">
+				Non-immigrant alien with one of the following Visas: A-1, E-1, E-2, F-1, G-1, G-2, G-3, G-4, H-1, H-4 (families of H-1), I, J, K, L, N, R.<br>
+			</label><br><br></div>
                 <button name="submit"  type="submit" class="btn">Submit</button>
             </div>
             </form>

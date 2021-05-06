@@ -5,42 +5,43 @@ CREATE TABLE LOGINS (
 	EMPLID INT(8) NOT NULL PRIMARY KEY,
 	FORM_STATUS varchar(40)
 );
-
+INSERT INTO LOGINS VALUES ('test', '1234', 'Student', '12345678', 'Not Submitted');
 INSERT INTO LOGINS VALUES ('Jon.Doe11@qmail.cuny.edu', '11111111', 'Student', '11111111', 'Not Submitted');
 INSERT INTO LOGINS VALUES ('Jane.Doe11@qmail.cuny.edu', '22222222', 'Student', '22222222', 'Not Submitted');
 INSERT INTO LOGINS VALUES ('Zach.Gal33@qmail.cuny.edu', '33333333', 'Bursar', '33333333', NULL);
 INSERT INTO LOGINS VALUES ('Zoe.Gal44@qmail.cuny.edu', '44444444', 'Bursar', '44444444', NULL);
 INSERT INTO LOGINS VALUES ('Zom.Bie55@qmail.cuny.edu', '55555555', 'Admin', '55555555', NULL);
 
-SELECT *
-FROM LOGINS;
+SELECT USERNAME, PASS_WORD FROM LOGINS;
+
 
 /*
 1 table for 3 different forms
 all connect with a foriegn key that connects to the student
 */
+drop table if exists TEST;
+Create table TEST(
+	IMMIGRATION varchar(20) NOT NULL
+);
+select * from TEST;
 CREATE TABLE PAGES (	
 	-- PG 1
     _NAME_ varchar(40) NOT NULL, 
 	EMPLID INT(8) NOT NULL REFERENCES LOGINS,
-    FROM_DATE DATE Not Null,
-    TO_DATE DATE Not NULL,
-    UNDER_18 Boolean,
-    UNDER_23 Boolean,
-    FRESHMAN Boolean,
-    Transfer Boolean,
-    SEEK BOOLEAN,
-    ACE_LEAP Boolean,
-    Non_Degree Boolean,
-    RE_Enter Boolean,
-    REQUESTED_BY DATE not null,
-    _DATE_ DATE not null,
+    IMMIGRATION_STATUS VARCHAR(30) NOT NULL,
+    -- FROM_DATE DATE Not Null,
+    -- TO_DATE DATE Not NULL,
+    UNDER_18 varchar(3),
+    UNDER_23 varchar(3),
+    STUDENT_TYPE varchar(15),
+    REQUESTED_BY varchar(20) not null,
+    _DATE_ varchar(20) not null,
     -- PG 2
     LAST_NAME varchar(50) NOT NULL,
     FIRST_NAME varchar(50) NOT NULL,
     MIDDLE_INITIAL varchar(1), 
-    DOB DATE NOT NULL,
-    PHONE_NUMBER INT(10) NOT NULL,
+    DOB varchar(20) NOT NULL,
+    PHONE_NUMBER nvarchar(15) NOT NULL,
     IS_CITIZEN Boolean,
     ALIEN Boolean,
     CURR_ADDRESS varchar(100) NOT NULL,

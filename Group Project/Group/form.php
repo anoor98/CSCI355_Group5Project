@@ -61,8 +61,8 @@ echo $_SESSION['username'] ?? 'empty';
 					<!--Student Info-->
 			 <div class="nav justify-content-center">
 
-                    Name: <input name="Name" type='text' style='border:none;border-bottom:black solid 1px' required>Soc. Sec./Student I.D. No.
-			<input type='password' style='border:none;border-bottom:black solid 1px' required>
+                    Name: <input name="Name" type='text' style='border:none;border-bottom:black solid 1px' required>
+					Soc. Sec./Student I.D. No.<input name="Emplid" type='password' style='border:none;border-bottom:black solid 1px' required>
 			
 			</div>
 		
@@ -88,29 +88,33 @@ echo $_SESSION['username'] ?? 'empty';
 			<!--Immigration Status Options-->
 			<div class="ISOptions">
 			<label>
-				<input name="status" type="checkbox" id="ImmigrationOption" name="ImmigrationStatus" value="ImmigrationOption1">
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Permanent residents">
 				Permanent residents must submit their Alien Registration Card (green card) or passport and I-94 Card with I-551 stamp.<br>
 			</label>
+			<br>
 			<label>
-				<input name="status" type="checkbox" id="ImmigrationOption" name="ImmigrationStatus" value="ImmigrationOption2">
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Immigrant aliens pending">
 				Immigrant aliens pending permanent residency status and non-immigrant aliens must submit their passport and I-94 Card.<br>
 			</label>
+			<br>
 			<label>
-				<input name="status" type="checkbox" id="ImmigrationOption" name="ImmigrationStatus" value="ImmigrationOption3">
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="U.S. citizen">
 				Proof of U.S. citizenship—U.S. passport, birth certificate, or naturalization papers.<br>
 			</label>
+			<br>
 			<label>
-				<input name="status" type="checkbox" id="ImmigrationOption" name="ImmigrationStatus" value="ImmigrationOption4">
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Refugee/Asylum Granted">
 				“Refugee/Asylum Granted” stamped on passport or I-94 Card.<br>
 			</label>
+			<br>
 			<label>
-				<input name="status" type="checkbox" id="ImmigrationOption" name="ImmigrationStatus" value="ImmigrationOption5">
+				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Non-immigrant alien">
 				Non-immigrant alien with one of the following Visas: A-1, E-1, E-2, F-1, G-1, G-2, G-3, G-4, H-1, H-4 (families of H-1), I, J, K, L, N, R.<br>
 			</label><br><br></div>
 			
 			<!--Residency List-->
 			<label>
-				<b>Residency: </b> Please complete the enclosed City University Residency Form and submit it with the documents requested below. These items will
+				<b>Residency: </b>Please complete the enclosed City University Residency Form and submit it with the documents requested below. These items will
 				prove that you have been living in New York State for a consecutive period of one full year prior to the first day of classes of the semester for which
 				you are applying. The documents must cover the period from 2020 to 2021:
 			</label>
@@ -123,7 +127,7 @@ echo $_SESSION['username'] ?? 'empty';
 			Items “<b>a</b>” through “<b>q</b>” are as follows:
 			</p>
 			
-			<ol type="a">
+			<ol type="a" >
 				<li>Lease, deed, or rent registration form (used for rent-stabilized apartments) signed by the landlord (which is either a public or private agency) and the student or a parent of the student with the same surname. </li>
 				<li>Budget/benefit letter from New York City Public Assistance with the student’s New York address covering the 12-month period immediately preceding the first day of classes and including the student’s name. </li>
 				<li>Benefit letter from Social Security with the student’s New York address covering the 12-month period immediately preceding the first day of classes and including the student’s name. </li>
@@ -146,11 +150,11 @@ echo $_SESSION['username'] ?? 'empty';
 			
 			<!--Student Age Checking-->
 			<label>
-				<p><input name="age" type="checkbox" id="under18" name="age" value="18">
-				<b>Students Under the Age of 18:</b> If you have a legal guardian other than your parents, or your parents are separated or divorced, a copy of the legal guardianship papers or court order indicating legal custodianship must be submitted.<br></p>
+				<input name="under18" type="checkbox" id="under18"  value="under 18">
+				<b>Students Under the Age of 18:</b> If you have a legal guardian other than your parents, or your parents are separated or divorced, a copy of the legal guardianship papers or court order indicating legal custodianship must be submitted.<br>
 			</label>
 			<label>
-				<input name="age" type="checkbox" id="under24" name="age" value="24">
+				<input name="under24" type="checkbox" id="under24"  value="under 24">
 				<b>Students Under the Age of 24:</b> A student under the age of 24 must submit sufficient evidence to determine whether the student is a resident of the parents’ state, or New York.
 			</label>
 						
@@ -158,27 +162,27 @@ echo $_SESSION['username'] ?? 'empty';
 			<div class="office">
 				<div class="row1">
 					<p><label>
-						<input name="type" type="checkbox" id="student-type" name="student" value="freshman">
+						<input name="type" type="radio" id="student-type"  value="freshman">
 						Freshman
 					</label>
 					<label>
-						<input name="type" type="checkbox" id="student-type" name="student" value="transfer">
+						<input name="type" type="radio" id="student-type"  value="transfer">
 						Transfer
 					</label>
 					<label>
-						<input name="type" type="checkbox" id="student-type" name="student" value="seek">
+						<input name="type" type="radio" id="student-type"  value="seek">
 						SEEK
 					</label>
 					<label>
-						<input name="type" type="checkbox" id="student-type" name="student" value="ace/leap">
+						<input name="type" type="radio" id="student-type"  value="ace/leap">
 						ACE/LEAP
 					</label>
 					<label>
-						<input name="type" type="checkbox" id="student-type" name="student" value="non-degree">
+						<input name="type" type="radio" id="student-type"  value="non-degree">
 						Non-Degree
 					</label>
 					<label>
-						<input name="type" type="checkbox" id="student-type" name="student" value="reenter">
+						<input name="type" type="radio" id="student-type"  value="reenter">
 						Reenter
 					</label>
 					<label for="semester-id"> Semester: 
@@ -193,57 +197,59 @@ echo $_SESSION['username'] ?? 'empty';
 					<label for="date-id"> Date: </label>
 					<input name="date" type='text' style='border:none;border-bottom:black solid 1px'>
 				</div>
-				<div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 text-center">
+
+						<br>
+		<div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 text-center">
 		<div class="col-lg-4 col-12">
 			<label for="last"><b>1.</b> Last Name:</label>
-			<input name="ln" type="text" name="last" required>
+			<input name="lastName" type="text" required>
 		</div>
 		
 		<div class="col-lg-4 col-12">
 			<label for="first">First Name:</label>
-			<input name="fn" type="text" name="first"required>	
+			<input name="firstName" type="text" required>	
 		</div>
 		
 		<div class="col-lg-4 col-12">
 			<label for="middle">Middle Initial:</label>
-			<input name="mi" type="text" name="middle">	
+			<input name="mi" type="text">	
 		</div>
 		<!-- </div> -->
 
 		<!-- <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5"> -->
 		<div class="col-lg-4 col-12">
 			<label for="id">Student Id No.:</label>
-			<input name="id" type="text" name="id" required>
+			<input name="Emplid" type="text" required>
 		</div>
 		
 		<div class="col-lg-4 col-12">
-			<label for="DoB">Date of Birth:</label>
-			<input name="birth" type="text" name="DoB" required>	
+			<label for="dob">Date of Birth:</label>
+			<input name="dob" type="text" required>	
 		</div>
 		
 		<div class="col-lg-4 col-12">
 			<label for="phone">Phone Number:</label>
-			<input name="phone" type="text" name="phone" required>	
+			<input name="phone" type="text" required>	
 		</div>
 		</div>
 
 		<div class="radios row  row-cols-md-2 row-cols-lg-2">
 			<div class="col-xl-4 col-lg-6 col-md-6">
 				<label for="citizen"><b>2.</b> Are you a U.S. citizen?</label>
-				<input name="citizen" type="radio" id="radio-1" name="citizen" value="val-1"> Yes
-				<input name="citizen" type="radio" id="radio-2" name="citizen" value="val-2"> No
+				<input name="citizen" type="radio" id="radio-1" value="yes"> Yes
+				<input name="citizen" type="radio" id="radio-2" value="no"> No
 			</div>
 		
 			<div class="col-xl-4 col-lg-6 col-md-6">
 				<label for="alien">Are you a permanent resident alien?</label>
-				<input name="resident" type="radio" id="radio-1" name="alien" value="val-1"> Yes
-				<input name="resident" type="radio" id="radio-2" name="alien" value="val-2"> No
+				<input type="radio" id="radio-1" name="alien" value="yes"> Yes
+				<input type="radio" id="radio-2" name="alien" value="no"> No
 			</div>
 		</div>
 
 		<div>
 			<label for="address"><b>3.</b> Current Address:</label>
-			<input name="CurrentAddy" type="text" name="address" required>	
+			<input name="currentAdd" type="text" required>	
 		</div>
 
 		<label for="list"><b>4.</b> List below all your addresses, including temporary addresses and summer addresses during the past 12 months, starting from your current address and working backwards</label>
@@ -260,215 +266,179 @@ echo $_SESSION['username'] ?? 'empty';
 				<tbody>
 					<tr class="text-center">
 						<td><select name="from-1">
-							<option value="val1">Jan.</option>
-							<option value="val2">Feb.</option>
-							<option value="val3">Mar.</option>
-							<option value="val4">Apr.</option>
-							<option value="val5">May</option>
-							<option value="val6">June</option>
-							<option value="val7">July</option>
-							<option value="val8">Aug.</option>
-							<option value="val9">Sep.</option>
-							<option value="val10">Oct.</option>
-							<option value="val11">Nov.</option>
-							<option value="val12">Dec.</option>
+							<option value="January">Jan.</option>
+							<option value="February">Feb.</option>
+							<option value="March">Mar.</option>
+							<option value="April">Apr.</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">Aug.</option>
+							<option value="September">Sep.</option>
+							<option value="October">Oct.</option>
+							<option value="November">Nov.</option>
+							<option value="December">Dec.</option>
 						</select><select name="from-1.5">
-							<option value="val1">2021</option>
-							<option value="val2">2020</option>
+							<option value="2021">2021</option>
+							<option value="2020">2020</option>
 						</select></td>
 						<td><select name="to-1">
-							<option value="val1">Jan.</option>
-							<option value="val2">Feb.</option>
-							<option value="val3">Mar.</option>
-							<option value="val4">Apr.</option>
-							<option value="val5">May</option>
-							<option value="val6">June</option>
-							<option value="val7">July</option>
-							<option value="val8">Aug.</option>
-							<option value="val9">Sep.</option>
-							<option value="val10">Oct.</option>
-							<option value="val11">Nov.</option>
-							<option value="val12">Dec.</option>
+						<option value="January">Jan.</option>
+							<option value="February">Feb.</option>
+							<option value="March">Mar.</option>
+							<option value="April">Apr.</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">Aug.</option>
+							<option value="September">Sep.</option>
+							<option value="October">Oct.</option>
+							<option value="November">Nov.</option>
+							<option value="December">Dec.</option>
 						</select><select name="to-1.5">
-							<option value="val1">2021</option>
-							<option value="val2">2020</option>
+							<option value="2021">2021</option>
+							<option value="2020">2020</option>
 						</select></td>
 						<td><input type="text" class="addy" name="addy-1" placeholder="Street City State Zip"></td>
 					</tr>
 					<tr class="text-center">
 						<td><select name="from-2">
-							<option value="val1">Jan.</option>
-							<option value="val2">Feb.</option>
-							<option value="val3">Mar.</option>
-							<option value="val4">Apr.</option>
-							<option value="val5">May</option>
-							<option value="val6">June</option>
-							<option value="val7">July</option>
-							<option value="val8">Aug.</option>
-							<option value="val9">Sep.</option>
-							<option value="val10">Oct.</option>
-							<option value="val11">Nov.</option>
-							<option value="val12">Dec.</option>
+						<option value="January">Jan.</option>
+							<option value="February">Feb.</option>
+							<option value="March">Mar.</option>
+							<option value="April">Apr.</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">Aug.</option>
+							<option value="September">Sep.</option>
+							<option value="October">Oct.</option>
+							<option value="November">Nov.</option>
+							<option value="December">Dec.</option>
 						</select><select name="from-2.5">
-							<option value="val1">2021</option>
-							<option value="val2">2020</option>
+						<option value="2021">2021</option>
+							<option value="2020">2020</option>
 						</select></td>
 						<td><select name="to-2">
-							<option value="val1">Jan.</option>
-							<option value="val2">Feb.</option>
-							<option value="val3">Mar.</option>
-							<option value="val4">Apr.</option>
-							<option value="val5">May</option>
-							<option value="val6">June</option>
-							<option value="val7">July</option>
-							<option value="val8">Aug.</option>
-							<option value="val9">Sep.</option>
-							<option value="val10">Oct.</option>
-							<option value="val11">Nov.</option>
-							<option value="val12">Dec.</option>
+						<option value="January">Jan.</option>
+							<option value="February">Feb.</option>
+							<option value="March">Mar.</option>
+							<option value="April">Apr.</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">Aug.</option>
+							<option value="September">Sep.</option>
+							<option value="October">Oct.</option>
+							<option value="November">Nov.</option>
+							<option value="December">Dec.</option>
 						</select><select name="to-2.5">
-							<option value="val1">2021</option>
-							<option value="val2">2020</option>
+						<option value="2021">2021</option>
+							<option value="2020">2020</option>
 						</select></td>
 						<td><input type="text" class="addy" name="addy-2" placeholder="Street City State Zip"></td>
 					</tr>
 					<tr class="text-center">
 						<td><select name="from-3">
-							<option value="val1">Jan.</option>
-							<option value="val2">Feb.</option>
-							<option value="val3">Mar.</option>
-							<option value="val4">Apr.</option>
-							<option value="val5">May</option>
-							<option value="val6">June</option>
-							<option value="val7">July</option>
-							<option value="val8">Aug.</option>
-							<option value="val9">Sep.</option>
-							<option value="val10">Oct.</option>
-							<option value="val11">Nov.</option>
-							<option value="val12">Dec.</option>
+						<option value="January">Jan.</option>
+							<option value="February">Feb.</option>
+							<option value="March">Mar.</option>
+							<option value="April">Apr.</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">Aug.</option>
+							<option value="September">Sep.</option>
+							<option value="October">Oct.</option>
+							<option value="November">Nov.</option>
+							<option value="December">Dec.</option>
 						</select><select name="from-3.5">
-							<option value="val1">2021</option>
-							<option value="val2">2020</option>
+						<option value="2021">2021</option>
+							<option value="2020">2020</option>
 						</select></td>
 						<td><select name="to-3">
-							<option value="val1">Jan.</option>
-							<option value="val2">Feb.</option>
-							<option value="val3">Mar.</option>
-							<option value="val4">Apr.</option>
-							<option value="val5">May</option>
-							<option value="val6">June</option>
-							<option value="val7">July</option>
-							<option value="val8">Aug.</option>
-							<option value="val9">Sep.</option>
-							<option value="val10">Oct.</option>
-							<option value="val11">Nov.</option>
-							<option value="val12">Dec.</option>
+						<option value="January">Jan.</option>
+							<option value="February">Feb.</option>
+							<option value="March">Mar.</option>
+							<option value="April">Apr.</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">Aug.</option>
+							<option value="September">Sep.</option>
+							<option value="October">Oct.</option>
+							<option value="November">Nov.</option>
+							<option value="December">Dec.</option>
 						</select><select name="to-3.5">
-							<option value="val1">2021</option>
-							<option value="val2">2020</option>
+						<option value="2021">2021</option>
+							<option value="2020">2020</option>
 						</select></td>
 						<td><input type="text" class="addy" name="addy-3" placeholder="Street City State Zip"></td>
 					</tr>
-					<tr class="text-center">
-						<td><select name="from-4">
-							<option value="val1">Jan.</option>
-							<option value="val2">Feb.</option>
-							<option value="val3">Mar.</option>
-							<option value="val4">Apr.</option>
-							<option value="val5">May</option>
-							<option value="val6">June</option>
-							<option value="val7">July</option>
-							<option value="val8">Aug.</option>
-							<option value="val9">Sep.</option>
-							<option value="val10">Oct.</option>
-							<option value="val11">Nov.</option>
-							<option value="val12">Dec.</option>
-						</select><select name="from-4.5">
-							<option value="val1">2021</option>
-							<option value="val2">2020</option>
-						</select></td>
-						<td><select name="to-4">
-							<option value="val1">Jan.</option>
-							<option value="val2">Feb.</option>
-							<option value="val3">Mar.</option>
-							<option value="val4">Apr.</option>
-							<option value="val5">May</option>
-							<option value="val6">June</option>
-							<option value="val7">July</option>
-							<option value="val8">Aug.</option>
-							<option value="val9">Sep.</option>
-							<option value="val10">Oct.</option>
-							<option value="val11">Nov.</option>
-							<option value="val12">Dec.</option>
-						</select><select name="to-4.5">
-							<option value="val1">2021</option>
-							<option value="val2">2020</option>
-						</select></td>
-						<td><input type="text" class="addy" name="addy-4" placeholder="Street City State Zip"></td>
-					</tr>
+					
 				</tbody>
 		  </table>	
 		
 		<div>
 			<label for="parents"><b>5.</b> Parents' permanent address: </label>
-			<input id="parents" name="parents" required></input>
+			<input type="text" id="parents" name="parentsAdd" required></input>
 		</div>
 		
 		<div class="radios">
 			<label for="age"><b>6.</b> Are you under the age of 18?</label>
-			<input type="radio" id="radio-1" name="age" value="val-1"> Yes
-			<input type="radio" id="radio-2" name="age" value="val-2"> No	
+			<input type="radio" id="radio-1" name="under18" value="yes"> Yes
+			<input type="radio" id="radio-2" name="under18" value="no"> No	
 		</div>
 		
 		<div class="radios">
 			<label for="guardian">If yes, does anyone other than your parents serve as your legal guardian?</label>
-			<input type="radio" id="radio-1" name="guardian" value="val-1"> Yes
-			<input type="radio" id="radio-2" name="guardian" value="val-2"> No	
+			<input type="radio" id="radio-1" name="guardian" value="yes"> Yes
+			<input type="radio" id="radio-2" name="guardian" value="no"> No	
 		</div>		
 		
 		<div>
 
 		</div>
 		<label for="naa">If yes, what is the name and address?</label>
-		<input id="source" name="naa"></input>
+		<input type="text" id="source" name="naa"></input>
 		<div>
 			
 		</div>
 		<label for="source"><b>7.</b> What is the source of your support?</label>
-		<input id="source" name="source" required></input>
+		<input type="text" id="source" name="source" required></input>
 		<div class="radios">
 			<label for="resident-income"><b>8.</b> Did you file a New York City/State resident income tax return during the past 12 months?</label>
-			<input type="radio" id="radio-1" name="resident-income" value="val-1"> Yes
-			<input type="radio" id="radio-2" name="resident-income" value="val-2"> No	
+			<input type="radio" id="radio-1" name="resident-income" value="yes"> Yes
+			<input type="radio" id="radio-2" name="resident-income" value="no"> No	
 		</div>
 		
 		<div class="radios">
 			<label for="federal-income"><b>9.</b> Did you file a Federal income tax return during the past 12 months?</label>
-			<input type="radio" id="radio-1" name="federal-income" value="val-1"> Yes
-			<input type="radio" id="radio-2" name="federal-income" value="val-2"> No	
+			<input type="radio" id="radio-1" name="federal-income" value="yes"> Yes
+			<input type="radio" id="radio-2" name="federal-income" value="no"> No	
 		</div>
 		
 		<div class="radios">
 			<label for="apply"><b>10.</b> Have you applied for any financial aid, scholarshops, or other benefits provided under the laws of the State of New York or the United States?</label>
-			<input type="radio" id="radio-1" name="apply" value="val-1"> Yes
-			<input type="radio" id="radio-2" name="apply" value="val-2"> No	
+			<input type="radio" id="radio-1" name="apply" value="yes"> Yes
+			<input type="radio" id="radio-2" name="apply" value="no"> No	
 		</div>
 		
 		<div>
 			<label for="benefits">If yes, specify and indicate what benefits you are receiving.</label>
-			<input id="benefits" name="benefits"></input>	
+			<input type="text" id="benefits" name="benefits"></input>	
 		</div>
 		
 		<div class="radios">
 			<label for="intend"><b>11.</b> Do you presently intend to permanently live in New York City or New York State?</label>
-			<input type="radio" id="radio-1" name="intend" value="val-1"> Yes
-			<input type="radio" id="radio-2" name="intend" value="val-2"> No	
+			<input type="radio" id="radio-1" name="intend" value="yes"> Yes
+			<input type="radio" id="radio-2" name="intend" value="no"> No	
 		</div>
 		
 		
 		<div>
 			<label for="uncertain">If uncertain, please explain:</label>
-			<input id="uncertain" name="uncertain"></input>	
+			<input type="text" id="uncertain" name="uncertain"></input>	
 		</div>
 		
 
@@ -480,7 +450,7 @@ echo $_SESSION['username'] ?? 'empty';
 		
 		<div class="nav justify-content-center">
 			<label for="date">Date:</label>
-			<input type="text" name="date" required>	
+			<input type="text" name="currDate" required>	
 		
 			<label for="signature">Student Signature:</label>
 			<input type="text" name="signature" required>	
@@ -492,58 +462,16 @@ echo $_SESSION['username'] ?? 'empty';
 		<p>If you wish to appeal, you must notify the Registrar's Office (or other designated college appeal office) in writing within ten days of being notified that you have been determined to be a non-resident. At that time you may submit a statement to the Registrar (or other designated official) indicating why you disagree with the College's decision. The Registrar (or other designated official) will submit the City University Residency Form, copies of all documentation provided by you and any statement made by you, along with the College's determination, to the University's Office of the Vice Chancellor for Legal Affairs and General Counsel</p>	
 		</div>
 
-		<div class="body">
-				<div class="col-sm-12">
-					<div class="card card1 border border-5 border-light  text-center">
-						<p class="cardText">STATE OF NEW YORK COUNTY OF <input name="county" type='text' style='border:none;border-bottom:black solid 1px ;' placeholder="Insert County"></p>
-						<p class="cardText">
-							<input name="fullname" type='text' style='border:none;border-bottom:black solid 1px;' required placeholder="Insert Full Name">, being of dully sworn, </p>
-						<p class="cardText">deposes and says that:</p>
-					</div>
-				</div>
-
-				<div class="col-sm-12 nav justify-content-center">
-					<div class="card info border-light">
-
-
-						<ol class="c text-center">
-							<li>I currently reside in New York State at:<br />
-								<input name="address" type='text' style='border:none;border-bottom:black solid 1px' required placeholder="Enter Address">
-								<br /><input name="secondaryaddress" type='text' style='border:none;border-bottom:black solid 1px' required placeholder="Secondary Address">
-							</li>
-							<li>I have, or will have, resided in New York State for the twelve(12)months
-								<br /> preceding the first day of classes of the<input name="season" type='text' style='border:none;border-bottom:black solid 1px' required placeholder="Enter Season"> semester of 20
-								<input name="year" type='text' style='border:none;border-bottom:black solid 1px' required placeholder="last 2 digits of year">.
-							</li>
-							<li>I intend to remain in New York State permanently.</li>
-						</ol>
-						<div class="input-group-text">
-							<span name="signature1" id="inputGroup-sizing-sm"><b>Signature</b></span>
-							<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="card notary border-light text-center">
-
-					<p>SWORN TO BEFORE ME THIS </p>
-					<p><input name="day" placeholder="Day" type='text' style='border:none;border-bottom:black solid 1px' required>DAY OF THE MONTH </p>
-					<p>OF<input placeholder="Month" name="month" type='text' style='border:none;border-bottom:black solid 1px' placeholder="Season" required> , 20 <input name="year" placeholder="Year" type='text' style='border:none;border-bottom:black solid 1px'></p>
-					<p><input name="stamp" placeholder="Stamp" type='text' style='border:none;border-bottom:black solid 1px' required>NOTRAY PUBLIC </p>
-				</div>
-			
-
 			<!--Submit Form button-->
 			<div class="Submit nav justify-content-center">
-				<p><a href="pgLanding.html"><b>Submit form!</b>></p>
+				<button name="submit" type="submit" class="btn1">Submit</button>
 			</div>
 
 			<div >
 				<p style= text-align:center ; ><b>Queens College, CUNY | 65-30 Kissena Boulevard | Flushing, New York 11367-1597</b></p>
 			</div>
 			
-		</div>
+
 
 		</form>
 	</div>
