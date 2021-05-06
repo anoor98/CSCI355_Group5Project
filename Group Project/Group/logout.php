@@ -1,6 +1,7 @@
 <?php
-    // include_once('pglogin.php');
-    // unset($_SESSION['username']);
-    header("location: pglogin.php");
+    session_start();
+    session_unset();
+    session_destroy();
+    header("Location: pglogin.php");
 
 ?>

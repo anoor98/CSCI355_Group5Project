@@ -1,46 +1,54 @@
 <?php
-session_start();
-        $host = "mars.cs.qc.cuny.edu";
-        $dbUsername = "doen5420"; 
-        $dbPassword = "23665420";
-        $dbname = "doen5420";
+if (isset($_POST['submit'])){
+        session_start();
+        require 'connectDb.php';
 
-        //createing connection
-        $mysqli = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+        $name = $_POST["Name"];
+        $emplid = $_POST["id"];
+        $fdate = $_POST[""];
+        $tdate = $_POST[""];
+        $u18 = $_POST["age"];
+        $u23 = $_POST["age"];
+        $freshman = $_POST["type"];
+        $transfer = $_POST["type"];
+        $seek = $_POST["type"];
+        $ace = $_POST["type"];
+        $nonD = $_POST["type"];
+        $ReE = $_POST["type"];
+        $reDate = $_POST["requestby"];
+        $DATE = $_POST["date"];
 
-        if (mysqli_connect_error()){
-            die('Connect Error('. mysqli_connect_errno(). ')'. mysqli_connect_error());
-        } 
-	    else {
-                 
-                //  $_SESSION['username'] = $username;
-                if (isset($_SESSION["username"])) {
-                        $location_redirect = "pgLanding.php";
-                } 
-                else {
-                        echo "failed";
-                        $location_redirect = "pglogin.php";
-                        header("location: $location_redirect");
-                }
-                $Name = $_POST["Name"];
-                $id =$_POST["id"];
+        $lname = $_POST["ln"];
+        $fname = $_POST["fn"];
+        $mname = $_POST["mi"];
+        $DOBd = $_POST["birth"];
+        $phone = $_POST["phone"];
+        $is_cit = $_POST["citizen"];
+        $alien = $_POST["alien"];
+        $curr_add = $_POST["address"];
+        $par_add = $_POST["parents"];
+        $leg_gaurd = $_POST["gaurdian"];
+        $source_o_supp = $_POST["source"];
+        $tax_return = $_POST["resident-income"];
+        $fed_tax_return = $_POST["federal-income"];
+        $fin_aid = $_POST["apply"];
+        $benefits = $_POST["benefits"];
+        $live_in_ny = $_POST["intend"];
+        $uncertain = $_POST["uncertain"];
+        $esign = $_POST["signature"];
 
-                $sql = "INSERT INTO  TEST(NAME, EMPLID) VALUES ('$Name','$id') ";                
-                $mysqli->query($sql);
-                echo "hi";
-                echo $username;
-                echo $_SESSION['username'];
+        $county = $_POST["county"];
+        $sem_season = $_POST["season"];
+        $sem_num = $_POST["year"];
+        $day = $_POST["day"];
+        $month = $_POST["Month"];
+        $year = $_POST["year"];
+        $notary = $_POST["stamp"];
 
-
-                    // while($row = $result->fetch_assoc()){
-                    //     if ($row['USERNAME'] == $username && $row['PASS_WORD'] == $password){
-                    //         header("location: $location_redirect");
-                    //     }else{
-                    //         echo "Failed Login";
-                    //     }
-                    // }
-
-            
-        }
-
+        $sql = "INSERT INTO  TEST(NAME, EMPLID) VALUES ('$Name','$id') ";                
+        $mysqli->query($sql);
+        echo "hi";
+        echo $username;
+        echo $_SESSION['username'];
+}
 ?>

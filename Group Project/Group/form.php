@@ -12,10 +12,11 @@ echo $_SESSION['username'] ?? 'empty';
 	<!-- navbar -->
 
 	 <div class="topnav" id="myTopnav">
-          <a href="#home" class="active">Home</a>
-          <a href="#news">Fill Form</a>
+	 <a href="" class="active">Home</a>
+          <a href="form.php">Fill Form</a>
           <a href="#contact">Database</a>
           <a href="#about">Form Approvals</a>
+          <a href="logout.php">Logout</a>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>

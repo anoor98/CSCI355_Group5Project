@@ -31,7 +31,7 @@ echo $_SESSION['username'] ?? 'empty';
                 
                 </div>
                 <div class="wthree-field">
-                <button name="login"  type="submit" class="btn">Submit</button>
+                <button name="submit"  type="submit" class="btn">Submit</button>
             </div>
             </form>
             
