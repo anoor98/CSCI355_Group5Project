@@ -19,8 +19,8 @@ session_start();
       <div>
         <!-- navbar -->
         <div class="topnav" id="myTopnav">
-          <a href="#home" class="active">Home</a>
-          <a href="#news">Fill Form</a>
+          <a href="" class="active">Home</a>
+          <a href="newpg1.html">Fill Form</a>
           <a href="#contact">Database</a>
           <a href="#about">Form Approvals</a>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -38,8 +38,8 @@ session_start();
         </div>
           
         <div>
-        <button class="button button1">Student: Fill out form</button>
-          
+        <a href="newpg1.html"><button class="button button1">Student: Fill out form</button></a>
+
         <button class="button button2">Registrar: View forms</button>
         
         <button class="button button3">Admin: View database</button>
