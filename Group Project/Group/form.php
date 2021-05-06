@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    $_SESSION['username'] = $username;
+session_start();
+echo $_SESSION['username'] ?? 'empty';
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
  		<div class="row heading nav-justified">
 
    			<div class="nav-item nav-link col-md-4 col-sm-4">
-   				<img src="images/logo.svg" alt="logo" width="100%" height="100%">
+   				<img src="images/logo.jpeg" alt="logo" width="100%" height="100%">
    			</div>
     			
     		<div class="nav-item nav-link col-md-4 col-sm-4 ">
@@ -49,15 +49,9 @@
 	<div class="page1">
 		 
 		
-			<form action="" method=" ">
+			<form action="formSubmit.php" method="POST">
 		
 			<!--Office Checkboxes/Header-->
-
-			
-
-			
-		
-
 
 			<div >
 				<h1 style=text-align:center>  Verification of Status for Tuition Determination</h1>

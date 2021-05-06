@@ -33,10 +33,12 @@
                         <button name="login"  type="submit" class="btn">Get Started</button>
                     </div>
                 </form>
+               
             </div>
         </div>
     </section>
     <script src="index.js"></script>
+    
 </body>
 </html>
 

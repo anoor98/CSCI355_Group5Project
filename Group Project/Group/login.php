@@ -1,6 +1,19 @@
 <?php
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+function is_post_request() {
+    return $_SERVER['REQUEST_METHOD'] == 'POST';
+    }
+
+    session_start();
+    // $username = $_POST["username"];
+    // $password = $_POST["password"];
+    if(is_post_request()){
+        $username = $_POST["username"] ?? '';
+        $password = $_POST["password"] ?? '';
+
+        $_SESSION['username'] = $username;
+
+        // header("location:pgLanding.php");
+     
 
     if (!empty($username) && !empty($password)){
         $host = "mars.cs.qc.cuny.edu";
@@ -16,28 +29,31 @@
         } 
 	    else {
                  
-                 $_SESSION['username'] = $username;
+                
+                $username = $_SESSION['username'];
+                $username = isset($_SESSION["username"]) ? $_SESSION['username'] : '';
+
                 if (isset($_SESSION["username"])) {
                         $location_redirect = "pgLanding.php";
                 } 
                 else {
                         echo "failed";
                         $location_redirect = "pglogin.php";
+                        header("location: $location_redirect");
                 }
 
                 $sql = "SELECT USERNAME, PASS_WORD FROM LOGINS where USERNAME = '$username' and PASS_WORD = '$password'";
                 $result = $mysqli->query($sql);
 
-                // if ($result->num_rows > 0) {
+
                     while($row = $result->fetch_assoc()){
                         if ($row['USERNAME'] == $username && $row['PASS_WORD'] == $password){
-                            // echo "Login Success";
                             header("location: $location_redirect");
                         }else{
                             echo "Failed Login";
                         }
                     }
-                // }
+
             
         }
         
@@ -45,5 +61,7 @@
 	echo " All fields are required";
         die();
     }
+}
 ?>
+
 

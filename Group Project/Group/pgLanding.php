@@ -1,7 +1,7 @@
 <?php
 session_start();
+echo $_SESSION['username'] ?? 'empty';
 ?>
-
 <!DOCTYPE html>
   <html>
     <head>
@@ -23,6 +23,7 @@ session_start();
           <a href="newpg1.html">Fill Form</a>
           <a href="#contact">Database</a>
           <a href="#about">Form Approvals</a>
+          <a href="<?php unset($_SESSION['username']); header("location: logout.php") ?>">Logout</a>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>
@@ -36,9 +37,11 @@ session_start();
           <h1>Welcome</h1>
 
         </div>
-          
+          <?php
+            echo $username;
+          ?>
         <div>
-        <a href="newpg1.html"><button class="button button1">Student: Fill out form</button></a>
+        <a href="form.php"><button class="button button1">Student: Fill out form</button></a>
 
         <button class="button button2">Registrar: View forms</button>
         
