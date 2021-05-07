@@ -66,6 +66,7 @@ if (isset($_POST['submit'])){
                                         LAST_NAME, 	
                                         FIRST_NAME ,	
                                         MIDDLE_INITI,
+
                                         DOB,		
                                         PHONE_NUMBER,
                                         IS_CITIZEN, 	
@@ -89,6 +90,7 @@ if (isset($_POST['submit'])){
                                         PARENTS_ADD, 	
                                         LEGAL_GAURD_U18, 
                                         IF_LEGAL_GAURD_YES,
+                                        NameAAddress,
                                         SOURCE_OF_SUPPORT,
                                         TAX_RETURN12, 	
                                         FED_TAX12, 		
@@ -109,7 +111,7 @@ if (isset($_POST['submit'])){
                                                         '$lname',
                                                         '$fname',
                                                         '$mname',
-                                                        '$emplid',
+                                                        -- '$emplid',
                                                         '$DOB',
                                                         '$phone',
                                                         '$citizen',
@@ -142,7 +144,7 @@ if (isset($_POST['submit'])){
                                                         '$live_in_ny',
                                                         '$uncertain',
                                                         '$esignDate',
-                                                        '$esign') ";                
+                                                        '$esign')";                
         $mysqli->query($sql);
         echo "hi";
         echo $username;
