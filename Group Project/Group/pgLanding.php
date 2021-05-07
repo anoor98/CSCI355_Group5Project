@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo $_SESSION['username'] ?? 'empty';
 ?>
 <!DOCTYPE html>
   <html>
@@ -35,11 +34,11 @@ echo $_SESSION['username'] ?? 'empty';
         
         <div class="welcome">
           <h1>Welcome</h1>
-
         </div>
-          <?php
-            echo $username;
-          ?>
+
+        <h1 style="text-align: center;"><?php echo $_SESSION['username'];?></h1>
+
+          
         <div>
         <a href="form.php"><button class="button button1">Student: Fill out form</button></a>
 

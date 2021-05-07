@@ -23,21 +23,21 @@ if (isset($_POST['submit'])){
         $alien = $_POST["alien"];
         $currentAdd = $_POST["currentAdd"];
 
-        // $fromm1 = $_POST['fromm1'];
-        // $fromy1 = $_POST['fromy1'];
-        // $tom1 = $_POST['tom1'];
-        // $toy1 = $_POST['toy1'];
-        // $add1 = $_POST['add1'];
-        // $fromm2 = $_POST['fromm2'];
-        // $fromy2 = $_POST['fromy2'];
-        // $tom2 = $_POST['tom2'];
-        // $toy2 = $_POST['toy2'];
-        // $add2 = $_POST['add2'];
-        // $fromm3 = $_POST['fromm3'];
-        // $fromy3 = $_POST['fromy3'];
-        // $tom3 = $_POST['tom3'];
-        // $toy3 = $_POST['toy3'];
-        // $add3 = $_POST['add3'];
+        $fromm1 = $_POST['fromm1'];
+        $fromy1 = $_POST['fromy1'];
+        $tom1 = $_POST['tom1'];
+        $toy1 = $_POST['toy1'];
+        $add1 = $_POST['add1'];
+        $fromm2 = $_POST['fromm2'];
+        $fromy2 = $_POST['fromy2'];
+        $tom2 = $_POST['tom2'];
+        $toy2 = $_POST['toy2'];
+        $add2 = $_POST['add2'];
+        $fromm3 = $_POST['fromm3'];
+        $fromy3 = $_POST['fromy3'];
+        $tom3 = $_POST['tom3'];
+        $toy3 = $_POST['toy3'];
+        $add3 = $_POST['add3'];
 
         $parentsAdd = $_POST["parentsAdd"];
         $u182 = $_POST["under182"];
@@ -72,21 +72,21 @@ if (isset($_POST['submit'])){
                                         IS_CITIZEN, 	
                                         ALIEN, 		
                                         CURR_ADDRESS,
-                                        -- _FROMM1, 		
-                                        -- _FROMY1, 		
-                                        -- _TOM1, 			
-                                        -- _TOY1, 			
-                                        -- ADDY1			
-                                        -- _FROMM2, 		
-                                        -- _FROMY2, 		
-                                        -- _TOM2, 			
-                                        -- _TOY2, 			
-                                        -- ADDY2, 			
-                                        -- _FROMM3, 		
-                                        -- _FROMY3, 		
-                                        -- _TOM3, 			
-                                        -- _TOY3, 			
-                                        -- ADDY3 			
+                                        _FROMM1, 		
+                                        _FROMY1, 		
+                                        _TOM1, 			
+                                        _TOY1, 			
+                                        ADDY1,			
+                                        _FROMM2, 		
+                                        _FROMY2, 		
+                                        _TOM2, 			
+                                        _TOY2, 			
+                                        ADDY2, 			
+                                        _FROMM3, 		
+                                        _FROMY3, 		
+                                        _TOM3, 			
+                                        _TOY3, 			
+                                        ADDY3, 			
                                         PARENTS_ADD, 	
                                         LEGAL_GAURD_U18, 
                                         IF_LEGAL_GAURD_YES,
@@ -119,21 +119,21 @@ if (isset($_POST['submit'])){
                                                         '$citizen',
                                                         '$alien',
                                                         '$currentAdd',
-                                                        -- '$fromm1',
-                                                        -- '$fromy1',
-                                                        -- '$tom1',
-                                                        -- '$toy1',
-                                                        -- '$add1',
-                                                        -- '$fromm2',
-                                                        -- '$fromy2',
-                                                        -- '$tom2',
-                                                        -- '$toy2',
-                                                        -- '$add2',
-                                                        -- '$fromm3',
-                                                        -- '$fromy3',
-                                                        -- '$tom3',
-                                                        -- '$toy3',
-                                                        -- '$add3'
+                                                        '$fromm1',
+                                                        '$fromy1',
+                                                        '$tom1',
+                                                        '$toy1',
+                                                        '$add1',
+                                                        '$fromm2',
+                                                        '$fromy2',
+                                                        '$tom2',
+                                                        '$toy2',
+                                                        '$add2',
+                                                        '$fromm3',
+                                                        '$fromy3',
+                                                        '$tom3',
+                                                        '$toy3',
+                                                        '$add3',
                                                         '$parentsAdd',
                                                         '$u182',
                                                         '$guardian',

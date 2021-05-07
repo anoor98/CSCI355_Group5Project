@@ -8,10 +8,10 @@ if (isset($_POST['submit'])){
         $immigrationStatus = $_POST["immigrationStatus"];
         $u18 = $_POST["under18"];
         $u23 = $_POST["under24"];
-        $studentType = $_POST["studentType"];
-        $semester = $_POST["semester"];
-        $requestDate = $_POST["requestby"];
-        $DATE = $_POST["date"];
+        // $studentType = $_POST["studentType"];
+        // $semester = $_POST["semester"];
+        // $requestDate = $_POST["requestby"];
+        // $DATE = $_POST["date"];
 
         $lname = $_POST["lastName"];
         $fname = $_POST["firstName"];
@@ -54,17 +54,17 @@ if (isset($_POST['submit'])){
         $esignDate = $_POST["esignDate"];
         $esign = $_POST["signature"];
 
-        $sql = "INSERT INTO  PAGES(_NAME_, 		
-                                        EMPLID, 		
-                                        IMMIGRATION_STATUS,
-                                        UNDER_18, 	
-                                        UNDER_23, 	
-                                        STUDENT_TYPE,
-                                        SEMESTER, 	
-                                        REQUESTED_BY,
-                                        _DATE_ ,		
+        $sql = "INSERT INTO  PAGES(_NAME_, 
+                                        EMPLID, 
+                                        IMMIGRATION_STATUS, 
+                                        UNDER_18, 
+                                        UNDER_23,
+                                        -- STUDENT_TYPE,
+                                        -- SEMESTER, 	
+                                        -- REQUESTED_BY,
+                                        -- _DATE_,	
                                         LAST_NAME, 	
-                                        FIRST_NAME ,	
+                                        FIRST_NAME,	
                                         MIDDLE_INITIAL,
                                         EMPLID2,
                                         DOB,		
@@ -76,7 +76,7 @@ if (isset($_POST['submit'])){
                                         _FROMY1, 		
                                         _TOM1, 			
                                         _TOY1, 			
-                                        ADDY1 ,			
+                                        ADDY1,			
                                         _FROMM2, 		
                                         _FROMY2, 		
                                         _TOM2, 			
@@ -99,15 +99,17 @@ if (isset($_POST['submit'])){
                                         LIVE_IN_NY, 		
                                         UNCERTAIN, 		
                                         ESIGN_DATE,		
-                                        ESIGN) VALUES ('$name',
+                                        ESIGN
+                                        ) VALUES (
+                                                        '$name',
                                                         '$emplid',
                                                         '$immigrationStatus',
                                                         '$u18',
                                                         '$u23',
-                                                        '$studentType',
-                                                        '$semester',
-                                                        '$requestDate',
-                                                        '$DATE',
+                                                        -- '$studentType',
+                                                        -- '$semester',
+                                                        -- '$requestDate',
+                                                        -- '$DATE',
                                                         '$lname',
                                                         '$fname',
                                                         '$mname',
@@ -147,9 +149,8 @@ if (isset($_POST['submit'])){
                                                         '$esign'
                                                         )";                
         $mysqli->query($sql);
-        echo "hi";
-        echo $username;
-        echo $_SESSION['username'];
+        header("Location: formComplete.php");
+        exit();
 }
 else{
     header("Location: form.php");

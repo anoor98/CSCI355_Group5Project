@@ -233,7 +233,7 @@ echo $_SESSION['username'] ?? 'empty';
 
                                 <label for="list"><b>4.</b> List below all your addresses, including temporary addresses and summer addresses during the past 12 months, starting from your current address and working backwards</label>
                                 <br>
-<!--
+
                                 <table class="table">
                                         <thead>
                                                 <tr class="text-center">
@@ -244,46 +244,57 @@ echo $_SESSION['username'] ?? 'empty';
                                         </thead>
                                         <tbody>
                                                 <tr class="text-center">
-                                                        <td><select >
-                                                                        <option name="fromm1" value="January">Jan.</option>
-                                                                        <option name="fromm1" value="February">Feb.</option>
-                                                                        <option name="fromm1" value="March">Mar.</option>
-                                                                        <option name="fromm1" value="April">Apr.</option>
-                                                                        <option name="fromm1" value="May">May</option>
-                                                                        <option name="fromm1" value="June">June</option>
-                                                                        <option name="fromm1" value="July">July</option>
-                                                                        <option name="fromm1" value="August">Aug.</option>
-                                                                        <option name="fromm1" value="September">Sep.</option>
-                                                                        <option name="fromm1" value="October">Oct.</option>
-                                                                        <option name="fromm1" value="November">Nov.</option>
-                                                                        <option name="fromm1" value="December">Dec.</option>
+                                                        <td>
+                                                                <select name="fromm1">
+                                                                        <option value=""></option>
+                                                                        <option value="January">Jan.</option>
+                                                                        <option value="February">Feb.</option>
+                                                                        <option value="March">Mar.</option>
+                                                                        <option value="April">Apr.</option>
+                                                                        <option value="May">May</option>
+                                                                        <option value="June">June</option>
+                                                                        <option value="July">July</option>
+                                                                        <option value="August">Aug.</option>
+                                                                        <option value="September">Sep.</option>
+                                                                        <option value="October">Oct.</option>
+                                                                        <option value="November">Nov.</option>
+                                                                        <option value="December">Dec.</option>
                                                                 </select>
-                                                                <select >
-                                                                        <option name="fromy1" value="2021">2021</option>
-                                                                        <option name="fromy1" value="2020">2020</option>
-                                                                </select></td>
-                                                        <td><select >
-                                                                        <option name="tom1" value="January">Jan.</option>
-                                                                        <option name="tom1" value="February">Feb.</option>
-                                                                        <option name="tom1" value="March">Mar.</option>
-                                                                        <option name="tom1" value="April">Apr.</option>
-                                                                        <option name="tom1" value="May">May</option>
-                                                                        <option name="tom1" value="June">June</option>
-                                                                        <option name="tom1" value="July">July</option>
-                                                                        <option name="tom1" value="August">Aug.</option>
-                                                                        <option name="tom1" value="September">Sep.</option>
-                                                                        <option name="tom1" value="October">Oct.</option>
-                                                                        <option name="tom1" value="November">Nov.</option>
-                                                                        <option name="tom1" value="December">Dec.</option>
+                                                                <select name="fromy1" >
+                                                                        <option value=""></option>
+                                                                        <option value="2021">2021</option>
+                                                                        <option value="2020">2020</option>
                                                                 </select>
-                                                                <select >
-                                                                        <option name="toy1" value="2021">2021</option>
-                                                                        <option name="toy1" value="2020">2020</option>
-                                                                </select></td>
+                                                        </td>
+                                                        <td>
+                                                                <select name="tom1" >
+                                                                        <option value=""></option>
+                                                                        <option value="January">Jan.</option>
+                                                                        <option value="February">Feb.</option>
+                                                                        <option value="March">Mar.</option>
+                                                                        <option value="April">Apr.</option>
+                                                                        <option value="May">May</option>
+                                                                        <option value="June">June</option>
+                                                                        <option value="July">July</option>
+                                                                        <option value="August">Aug.</option>
+                                                                        <option value="September">Sep.</option>
+                                                                        <option value="October">Oct.</option>
+                                                                        <option value="November">Nov.</option>
+                                                                        <option value="December">Dec.</option>
+                                                                </select>
+                                                                <select name="toy1">
+                                                                        <option value=""></option>
+                                                                        <option value="2021">2021</option>
+                                                                        <option value="2020">2020</option>
+                                                                </select>
+                                                        </td>
                                                         <td><input type="text" class="addy" name="add1" placeholder="Street City State Zip"></td>
                                                 </tr>
+                                               
                                                  <tr class="text-center">
-                                                        <td><select name="fromm2">
+                                                        <td>
+                                                                <select name="fromm2">
+                                                                        <option value=""></option>
                                                                         <option value="January">Jan.</option>
                                                                         <option value="February">Feb.</option>
                                                                         <option value="March">Mar.</option>
@@ -296,11 +307,16 @@ echo $_SESSION['username'] ?? 'empty';
                                                                         <option value="October">Oct.</option>
                                                                         <option value="November">Nov.</option>
                                                                         <option value="December">Dec.</option>
-                                                                </select><select name="fromy2">
+                                                                </select>
+                                                                <select name="fromy2">
+                                                                        <option value=""></option>
                                                                         <option value="2021">2021</option>
                                                                         <option value="2020">2020</option>
-                                                                </select></td>
-                                                        <td><select name="tom2">
+                                                                </select>
+                                                        </td>
+                                                        <td>
+                                                                <select name="tom2">
+                                                                        <option value=""></option>
                                                                         <option value="January">Jan.</option>
                                                                         <option value="February">Feb.</option>
                                                                         <option value="March">Mar.</option>
@@ -313,14 +329,19 @@ echo $_SESSION['username'] ?? 'empty';
                                                                         <option value="October">Oct.</option>
                                                                         <option value="November">Nov.</option>
                                                                         <option value="December">Dec.</option>
-                                                                </select><select name="toy2">
+                                                                </select>
+                                                                <select name="toy2">
+                                                                        <option value=""></option>
                                                                         <option value="2021">2021</option>
                                                                         <option value="2020">2020</option>
-                                                                </select></td>
+                                                                </select>
+                                                        </td>
                                                         <td><input type="text" class="addy" name="add2" placeholder="Street City State Zip"></td>
                                                 </tr>
                                                 <tr class="text-center">
-                                                        <td><select name="fromm3">
+                                                        <td>
+                                                                <select name="fromm3">
+                                                                        <option value=""></option>
                                                                         <option value="January">Jan.</option>
                                                                         <option value="February">Feb.</option>
                                                                         <option value="March">Mar.</option>
@@ -333,11 +354,16 @@ echo $_SESSION['username'] ?? 'empty';
                                                                         <option value="October">Oct.</option>
                                                                         <option value="November">Nov.</option>
                                                                         <option value="December">Dec.</option>
-                                                                </select><select name="fromy3">
+                                                                </select>
+                                                                <select name="fromy3">
+                                                                        <option value=""></option>
                                                                         <option value="2021">2021</option>
                                                                         <option value="2020">2020</option>
-                                                                </select></td>
-                                                        <td><select name="tom3">
+                                                                </select>
+                                                        </td>
+                                                        <td>
+                                                                <select name="tom3">
+                                                                        <option value=""></option>
                                                                         <option value="January">Jan.</option>
                                                                         <option value="February">Feb.</option>
                                                                         <option value="March">Mar.</option>
@@ -350,16 +376,19 @@ echo $_SESSION['username'] ?? 'empty';
                                                                         <option value="October">Oct.</option>
                                                                         <option value="November">Nov.</option>
                                                                         <option value="December">Dec.</option>
-                                                                </select><select name="toy3">
+                                                                </select>
+                                                                <select name="toy3">
+                                                                        <option value=""></option>
                                                                         <option value="2021">2021</option>
                                                                         <option value="2020">2020</option>
-                                                                </select></td>
+                                                                </select>
+                                                        </td>
                                                         <td><input type="text" class="addy" name="add3" placeholder="Street City State Zip"></td>
                                                 </tr> 
 
                                         </tbody>
                                 </table>
- -->
+
                                 <div>
                                         <label for="parents"><b>5.</b> Parents' permanent address: </label>
                                         <input type="text" id="parents" name="parentsAdd"></input>
@@ -441,7 +470,7 @@ echo $_SESSION['username'] ?? 'empty';
                                 <div>
                                         <p><u>PLEASE NOTE: YOU HAVE A RIGHT TO APPEAL A NON-NEW YORK CITY/STATE RESIDENCY DETERMINATION</u></p>
                                         <p>If you wish to appeal, you must notify the Registrar's Office (or other designated college appeal office) in writing within ten days of being notified that you have been determined to be a non-resident. At that time you may submit a statement to the Registrar (or other designated official) indicating why you disagree with the College's decision. The Registrar (or other designated official) will submit the City University Residency Form, copies of all documentation provided by you and any statement made by you, along with the College's determination, to the University's Office of the Vice Chancellor for Legal Affairs and General Counsel</p>
-                                </div> -->
+                                </div> 
                                 <button name="submit" type="submit" class="btn">Submit</button>
                         </div>
                 </form>
