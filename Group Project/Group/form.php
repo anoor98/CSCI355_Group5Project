@@ -12,9 +12,9 @@ session_start();
 	<!-- navbar -->
 
 	<div class="topnav" id="myTopnav">
-		<a href="" class="active">Home</a>
+		<a href="pgLanding.php" class="">Home</a>
 		<a href="form.php">Fill Form</a>
-		<a href="#contact">Database</a>
+		<a href="adminTable.php">Database</a>
 		<a href="#about">Form Approvals</a>
 		<a href="logout.php">Logout</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -209,8 +209,10 @@ session_start();
 
 			<br>
 			<div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 text-center">
+			
 				<div class="col-lg-4 col-12">
-					<label for="last"><b>1.</b> Last Name:
+				<b>1.</b>
+					<label for="last"> Last Name:
 						<input required name="lastName" type="text">
 					</label>
 				</div>
@@ -264,9 +266,12 @@ session_start();
 				<label for="address"><b>3.</b> Current Address:</label>
 				<input required name="currentAdd" type="text">
 			</div>
-
-			<label for="list"><b>4.</b> List below all your addresses, including temporary addresses and summer addresses during the past 12 months, starting from your current address and working backwards</label>
-			<br>
+			
+			<div>
+				<label for="list"><b>4.</b> List below all your addresses, including temporary addresses and summer addresses during the past 12 months, starting from your current address and working backwards</label>
+				<br>
+			</div>
+			
 
 			<table class="table">
 				<thead>
@@ -435,21 +440,21 @@ session_start();
 			</div>
 
 			<div class="radios">
-				<label for="guardian">If yes, does anyone other than your parents serve as your legal guardian?</label>
+				<label for="guardian"><b></b><b></b> yes, does anyone other than your parents serve as your legal guardian?</label>
 				<input type="radio" id="radio-1" name="guardian" value="yes"> Yes
 				<input type="radio" id="radio-2" name="guardian" value="no"> No
 			</div>
 
 			<div>
-
+				<label for="naa"><b></b><b></b>If yes, what is the name and address?</label>
+				<input type="text" id="source" name="naa"></input>
 			</div>
-			<label for="naa">If yes, what is the name and address?</label>
-			<input type="text" id="source" name="naa"></input>
+			
 			<div>
-
+				<label for="source"><b>7.</b> What is the source of your support?</label>
+				<input type="text" id="source" name="source"></input>
 			</div>
-			<label for="source"><b>7.</b> What is the source of your support?</label>
-			<input type="text" id="source" name="source"></input>
+			
 			<div class="radios">
 				<label for="resident-income"><b>8.</b> Did you file a New York City/State resident income tax return during the past 12 months?</label>
 				<input type="radio" id="radio-1" name="resident-income" value="yes"> Yes
@@ -469,7 +474,7 @@ session_start();
 			</div>
 
 			<div>
-				<label for="benefits">If yes, specify and indicate what benefits you are receiving.</label>
+				<label for="benefits"><b></b><b></b>If yes, specify and indicate what benefits you are receiving.</label>
 				<input type="text" id="benefits" name="benefits"></input>
 			</div>
 
@@ -481,7 +486,7 @@ session_start();
 
 
 			<div>
-				<label for="uncertain">If uncertain, please explain:</label>
+				<label for="uncertain"><b></b><b></b>If uncertain, please explain:</label>
 				<input type="text" id="uncertain" name="uncertain"></input>
 			</div>
 

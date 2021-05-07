@@ -1,44 +1,32 @@
 <?php
-// Process delete operation after confirmation
-if(isset($_POST["EMPLID"]) && !empty($_POST["EMPLID"])){
-    // Include config file
-    require_once "connectDb.php";
-    
+session_start();
+require "connectDb.php";
+
+$EMPLID = $_GET['EMPLID'];
+if(isset($EMPLID) && !empty($EMPLID)){
     // Prepare a delete statement
-    $sql = "DELETE FROM LOGINS WHERE EMPLID = ?";
-    
-    if($stmt = $mysqli->prepare($sql)){
-        // Bind variables to the prepared statement as parameters
-        $stmt->bind_param("i", $param_id);
-        
-        // Set parameters
-        $param_id = trim($_POST["EMPLID"]);
-        
-        // Attempt to execute the prepared statement
-        if($stmt->execute()){
-            // Records deleted successfully. Redirect to landing page
-            header("location: adminTable.php");
-            exit();
-        } else{
-            echo "Oops! Something went wrong. Please try again later.";
-        }
+    $sql = "DELETE FROM LOGINS WHERE EMPLID = '$EMPLID'";
+    $result = $mysqli->query($sql);
+    // $data = $mysqli_query($mysqli,$sql);
+    if($result){
+    // Attempt to execute the prepared statement
+        header("location: adminTable.php");
+        exit();
+    } 
+    else{
+        echo "Oops! Something went wrong. Please try again later.";
     }
-     
-    // Close statement
-    $stmt->close();
     
-    // Close connection
-    $mysqli->close();
-} else{
+}else{
     // Check existence of id parameter
     if(empty(trim($_GET["EMPLID"]))){
         // URL doesn't contain id parameter. Redirect to error page
-        header("location: error.php");
+        echo "failed";
         exit();
     }
 }
 ?>
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,13 +52,17 @@ if(isset($_POST["EMPLID"]) && !empty($_POST["EMPLID"])){
                             <p>Are you sure you want to delete this employee record?</p>
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
-                                <a href="index.php" class="btn btn-secondary ml-2">No</a>
+                                <a href="adminTable.php" class="btn btn-secondary ml-2">No</a>
                             </p>
                         </div>
+                      <?php
+                        
+                    ?>  
                     </form>
+                    
                 </div>
             </div>        
         </div>
     </div>
 </body>
-</html>
+</html> -->

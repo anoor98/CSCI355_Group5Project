@@ -20,7 +20,7 @@ session_start();
         <div class="topnav" id="myTopnav">
           <a href="" class="active">Home</a>
           <a href="form.php">Fill Form</a>
-          <a href="#contact">Database</a>
+          <a href="adminTable.php">Database</a>
           <a href="#about">Form Approvals</a>
           <a href="logout.php">Logout</a>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -44,7 +44,7 @@ session_start();
 
         <button class="button button2">Registrar: View forms</button>
         
-        <button class="button button3">Admin: View database</button>
+        <a href="adminTable.php"><button  class="button button3">Admin: View database</button></a>
         </div>
 
         <div class="footer">

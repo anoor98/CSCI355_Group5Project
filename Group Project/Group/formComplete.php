@@ -19,7 +19,7 @@ require 'connectDb.php';
 <div>
         <!-- navbar -->
         <div class="topnav" id="myTopnav">
-          <a href="" class="active">Home</a>
+          <a href="pgLanding.php" class="">Home</a>
           <a href="form.php">Fill Form</a>
           <a href="#contact">Database</a>
           <a href="#about">Form Approvals</a>
