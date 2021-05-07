@@ -1,8 +1,12 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="css/newpg1.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -24,6 +28,18 @@
     </script>
 </head>
 <body>
+<!-- navbar -->
+
+<div class="topnav" id="myTopnav">
+		<a href="pgLanding.php" class="">Home</a>
+		<a href="form.php">Fill Form</a>
+		<a href="adminTable.php">Database</a>
+		<a href="facultyView.php">Form Approvals</a>
+		<a href="logout.php">Logout</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -37,124 +53,35 @@
                     require_once "connectDb.php";
                     
                     // select query 
-                    $sql = "SELECT * FROM PAGES";
+                    $sql = "SELECT * FROM LOGINS";
                     if($result = $mysqli->query($sql)){
                         if($result->num_rows > 0){
                             echo '<table class="table table-bordered table-striped">';
                                 echo "<thead>";
                                     echo "<tr>";
                                         
-                                        echo "<th>NAME</th>";
-                                        echo "<th>EMPLID</th>";
-                                        echo "<th>IMMIGRATION_STATUS</th>";
-                                        echo "<th>FROM_DATE</th>";
-                                        echo "<th>TO_DATE</th>";
-                                        echo "<th>UNDER_18</th>";
-                                        echo "<th>UNDER_23</th>";
-                                        echo "<th>STUDENT_TYPE</th>";
-                                        echo "<th>SEMESTER</th>";
-                                        echo "<th>REQUESTED_BY</th>";
-                                        echo "<th>_DATE_</th>";
-                                        echo "<th>LAST_NAME</th>";
-                                        echo "<th>FIRST_NAME</th>";
-                                        echo "<th>MIDDLE_INITIAL</th>";
-                                        echo "<th>DOB</th>";
-                                        echo "<th>PHONE_NUMBER</th>";
-                                        echo "<th>IS_CITIZEN</th>";
-                                        echo "<th>ALIEN</th>";
-                                        echo "<th>CURR_ADDRESS</th>";
-                                        echo "<th>_FROMMY1</th>";
-                                        echo "<th>_FROMY1</th>";
-                                        echo "<th>_TOM1</th>";
-                                        echo "<th>_TOY1</th>";
-                                        echo "<th>ADDY1</th>";
-                                        echo "<th>FROMM2</th>";
-                                        echo "<th>_FROMY2</th>";
-                                        echo "<th>_TOM2</th>";
-                                        echo "<th>_TOY2</th>";
-                                        echo "<th>ADDY2</th>";
-                                        echo "<th>_FROMM3</th>";
-                                        echo "<th>_FROMY3</th>";
-                                        echo "<th>_TOM3</th>";
-                                        echo "<th>TOY3</th>";
-                                        echo "<th>ADDY3</th>";
-                                        echo "<th>PARENTS_ADD</th>";
-                                        echo "<th>LEGAL_GAURD_U18</th>";
-                                        echo "<th>IF_LEGAL_GAURD_YES</th>";
-                                        echo "<th>NameAAddress</th>";
-                                        echo "<th>SOURCE_OF_SUPPORT</th>";
-                                        echo "<th>TAX_RETURN12</th>";
-                                        echo "<th>FED_TAX12</th>";
-                                        echo "<th>FIN_AID</th>";
-                                        echo "<th>BENEFITS</th>";
-                                        echo "<th>LIVE_IN_NY</th>";
-                                        echo "<th>UNCERTAIN</th>";
-                                        echo "<th>ESIGN_DATE</th>";
-                                        echo "<th>ESIGN</th>";
+                                        echo "<th>USERNAME</th>";
+                                        echo "<th>PASSWORD</th>";
+                                        echo "<th>LOGIN-TYPE</th>";
+                                        echo "<th>FORM_STATUS</th>";
+                                        echo "<th>ID</th>";
+                                        echo "<th>ACTION</th>";
 
+                                        
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
-                                while($row = $result->fetch_array()){
-                                    echo "<tr>";
-                                        echo "<td>" . $row['NAME'] . "</td>";
-                                        echo "<td>" . $row['EMPLID'] . "</td>";
-                                        echo "<td>" . $row['IMMIGRATION_STATUS'] . "</td>";
-                                        echo "<td>" . $row['FROM_DATE'] . "</td>";
-                                        echo "<td>" . $row['TO_DATE'] . "</td>";
-                                        echo "<td>" . $row['UNDER_18'] . "</td>";
-                                        echo "<td>" . $row['UNDER_23'] . "</td>";
-                                        echo "<td>" . $row['STUDENT_TYPE'] . "</td>";
-                                        echo "<td>" . $row['SEMESTER'] . "</td>";
-                                        echo "<td>" . $row['REQUESTED_BY'] . "</td>";
-                                        echo "<td>" . $row['_DATE_'] . "</td>";
-                                        echo "<td>" . $row['LAST_NAME'] . "</td>";
-                                        echo "<td>" . $row['FIRST_NAME'] . "</td>";
-                                        echo "<td>" . $row['MIDDLE_INITIAL'] . "</td>";
-                                        echo "<td>" . $row['DOB'] . "</td>";
-                                        echo "<td>" . $row['PHONE_NUMBER'] . "</td>";
-                                        echo "<td>" . $row['IS_CITIZEN'] . "</td>";
-                                        echo "<td>" . $row['ALIEN'] . "</td>";
-                                        echo "<td>" . $row['CURR_ADDRESS'] . "</td>";
-                                        echo "<td>" . $row['_FROMMY1'] . "</td>";
-                                        echo "<td>" . $row['_FROMY1'] . "</td>";
-                                        echo "<td>" . $row['_TOM1'] . "</td>";
-                                        echo "<td>" . $row['_TOY1'] . "</td>";
-                                        echo "<td>" . $row['ADDY1'] . "</td>";
-                                        echo "<td>" . $row['FROMM2'] . "</td>";
-                                        echo "<td>" . $row['_FROMY2'] . "</td>";
-                                        echo "<td>" . $row['_TOM2'] . "</td>";
-                                        echo "<td>" . $row['_TOY2'] . "</td>";
-                                        echo "<td>" . $row['ADDY2'] . "</td>";
-                                        echo "<td>" . $row['_FROMM3'] . "</td>";
-                                        echo "<td>" . $row['_FROMY3'] . "</td>";
-                                        echo "<td>" . $row['_TOM3'] . "</td>";
-                                        echo "<td>" . $row['TOY3'] . "</td>";
-                                        echo "<td>" . $row['ADDY3'] . "</td>";
-                                        echo "<td>" . $row['PARENTS_ADD'] . "</td>";
-                                        echo "<td>" . $row['LEGAL_GAURD_U18'] . "</td>";
-                                        echo "<td>" . $row['IF_LEGAL_GAURD_YES'] . "</td>";
-                                        echo "<td>" . $row['NameAAddress'] . "</td>";
-                                        echo "<td>" . $row['SOURCE_OF_SUPPORT'] . "</td>";
-                                        echo "<td>" . $row['TAX_RETURN12'] . "</td>";
-                                        echo "<td>" . $row['FED_TAX12'] . "</td>";
-                                        echo "<td>" . $row['FIN_AID'] . "</td>";
-                                        echo "<td>" . $row['BENEFITS'] . "</td>";
-                                        echo "<td>" . $row['LIVE_IN_NY'] . "</td>";
-                                        echo "<td>" . $row['UNCERTAIN'] . "</td>";
-                                        echo "<td>" . $row['ESIGN_DATE'] . "</td>";
-                                        echo "<td>" . $row['ESIGN'] . "</td>";
-
-                                        echo "<td>";
-                                            // echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            // echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                            /* 
-                                            change this to edit functionality for faculty members
-                                            */
-                                            echo '<a href="delete.php?EMPLID='. $row['EMPLID'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                        echo "</td>";
-                                    echo "</tr>";
-                                }
+                                while($row = $result->fetch_assoc()){
+                                    echo "<tr>;
+                                        <td>" .$row['USERNAME']. "</td>
+                                        <td>" .$row['PASS_WORD']. "</td>
+                                        <td>" .$row['LOGIN_TYPE']. "</td>
+                                        <td>" .$row['FORM_STATUS']. "</td>;
+                                        <td>" .$row['EMPLID']. "</td>;
+                                        
+                                        <td><a href='adminDelete.php?EMPLID=$row[EMPLID]'>Delete</td>;
+                                    </tr>";
+                                } //title='Delete Record' data-toggle='tooltip'><span class='fa fa-trash'></span></a>
                                 echo "</tbody>";                            
                             echo "</table>";
                             // Free result set

@@ -34,7 +34,7 @@ session_start();
 		<a href="pgLanding.php" class="">Home</a>
 		<a href="form.php">Fill Form</a>
 		<a href="adminTable.php">Database</a>
-		<a href="#about">Form Approvals</a>
+		<a href="facultyView.php">Form Approvals</a>
 		<a href="logout.php">Logout</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 			<i class="fa fa-bars"></i>

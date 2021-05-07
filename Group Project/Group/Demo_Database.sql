@@ -11,10 +11,12 @@ INSERT INTO LOGINS VALUES ('Jon.Doe11@qmail.cuny.edu', '11111111', 'Student', '1
 INSERT INTO LOGINS VALUES ('Jane.Doe11@qmail.cuny.edu', '22222222', 'Student', '22222222', 'Not Submitted');
 INSERT INTO LOGINS VALUES ('Zach.Gal33@qmail.cuny.edu', '33333333', 'Bursar', '33333333', NULL);
 INSERT INTO LOGINS VALUES ('Zoe.Gal44@qmail.cuny.edu', '44444444', 'Bursar', '44444444', NULL);
+INSERT INTO LOGINS VALUES ('testbursar', '1234', 'Bursar', '33333330', NULL);
 INSERT INTO LOGINS VALUES ('Zom.Bie55@qmail.cuny.edu', '55555555', 'Admin', '55555555', NULL);
+INSERT INTO LOGINS VALUES ('testadmin', '123', 'Admin', '55555556', NULL);
 
 
-
+select * from LOGINS;
 /*
 1 table for 3 different forms
 all connect with a foriegn key that connects to the student
