@@ -19,36 +19,58 @@ echo $_SESSION['username'] ?? 'empty';
 		
                 <!--Office Checkboxes/Header-->
                 <div class = options>
-			<label>
-				<b>Immigration Status:</b> These items will determine if you are in an eligible immigration status for consideration of the lower tuition rate:
-			</label>
-                                                       </div>
-			<!--Immigration Status Options-->
-			<div class="ISOptions">
-			<label>
-				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Permanent residents">
-				Permanent residents must submit their Alien Registration Card (green card) or passport and I-94 Card with I-551 stamp.<br>
-			</label>
-			<br>
-			<label>
-				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Immigrant aliens pending">
-				Immigrant aliens pending permanent residency status and non-immigrant aliens must submit their passport and I-94 Card.<br>
-			</label>
-			<br>
-			<label>
-				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="U.S. citizen">
-				Proof of U.S. citizenship—U.S. passport, birth certificate, or naturalization papers.<br>
-			</label>
-			<br>
-			<label>
-				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Refugee/Asylum Granted">
-				“Refugee/Asylum Granted” stamped on passport or I-94 Card.<br>
-			</label>
-			<br>
-			<label>
-				<input name="immigrationStatus" type="radio" id="ImmigrationOption" value="Non-immigrant alien">
-				Non-immigrant alien with one of the following Visas: A-1, E-1, E-2, F-1, G-1, G-2, G-3, G-4, H-1, H-4 (families of H-1), I, J, K, L, N, R.<br>
-			</label><br><br></div>
+                <table class="table">
+				<thead>
+					<tr class="text-center">
+						<th>From</th>
+						<th>To</th>
+						<th>Complete Address</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="text-center">
+						<td><select name="fromm1">
+							<option value="January">Jan.</option>
+							<option value="February">Feb.</option>
+							<option value="March">Mar.</option>
+							<option value="April">Apr.</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">Aug.</option>
+							<option value="September">Sep.</option>
+							<option value="October">Oct.</option>
+							<option value="November">Nov.</option>
+							<option value="December">Dec.</option>
+						</select><select name="fromy1">
+							<option value="2021">2021</option>
+							<option value="2020">2020</option>
+						</select></td>
+						<td><select name="tom1">
+						<option value="January">Jan.</option>
+							<option value="February">Feb.</option>
+							<option value="March">Mar.</option>
+							<option value="April">Apr.</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">Aug.</option>
+							<option value="September">Sep.</option>
+							<option value="October">Oct.</option>
+							<option value="November">Nov.</option>
+							<option value="December">Dec.</option>
+						</select><select name="toy1">
+							<option value="2021">2021</option>
+							<option value="2020">2020</option>
+						</select></td>
+						<td><input type="text" class="addy" name="addy-1" placeholder="Street City State Zip"></td>
+					</tr>
+					
+			
+					</tr>
+					
+				</tbody>
+		  </table>	
                 <button name="submit"  type="submit" class="btn">Submit</button>
             </div>
             </form>

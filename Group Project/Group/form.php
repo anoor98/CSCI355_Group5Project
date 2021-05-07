@@ -162,27 +162,27 @@ echo $_SESSION['username'] ?? 'empty';
 			<div class="office">
 				<div class="row1">
 					<p><label>
-						<input name="type" type="radio" id="student-type"  value="freshman">
+						<input name="studentType" type="radio" id="student-type"  value="freshman">
 						Freshman
 					</label>
 					<label>
-						<input name="type" type="radio" id="student-type"  value="transfer">
+						<input name="studentType" type="radio" id="student-type"  value="transfer">
 						Transfer
 					</label>
 					<label>
-						<input name="type" type="radio" id="student-type"  value="seek">
+						<input name="studentType" type="radio" id="student-type"  value="seek">
 						SEEK
 					</label>
 					<label>
-						<input name="type" type="radio" id="student-type"  value="ace/leap">
+						<input name="studentType" type="radio" id="student-type"  value="ace/leap">
 						ACE/LEAP
 					</label>
 					<label>
-						<input name="type" type="radio" id="student-type"  value="non-degree">
+						<input name="studentType" type="radio" id="student-type"  value="non-degree">
 						Non-Degree
 					</label>
 					<label>
-						<input name="type" type="radio" id="student-type"  value="reenter">
+						<input name="studentType" type="radio" id="student-type"  value="reenter">
 						Reenter
 					</label>
 					<label for="semester-id"> Semester: 
@@ -265,7 +265,7 @@ echo $_SESSION['username'] ?? 'empty';
 				</thead>
 				<tbody>
 					<tr class="text-center">
-						<td><select name="from-1">
+						<td><select name="fromm1">
 							<option value="January">Jan.</option>
 							<option value="February">Feb.</option>
 							<option value="March">Mar.</option>
@@ -278,11 +278,11 @@ echo $_SESSION['username'] ?? 'empty';
 							<option value="October">Oct.</option>
 							<option value="November">Nov.</option>
 							<option value="December">Dec.</option>
-						</select><select name="from-1.5">
+						</select><select name="fromy1">
 							<option value="2021">2021</option>
 							<option value="2020">2020</option>
 						</select></td>
-						<td><select name="to-1">
+						<td><select name="tom1">
 						<option value="January">Jan.</option>
 							<option value="February">Feb.</option>
 							<option value="March">Mar.</option>
@@ -295,14 +295,14 @@ echo $_SESSION['username'] ?? 'empty';
 							<option value="October">Oct.</option>
 							<option value="November">Nov.</option>
 							<option value="December">Dec.</option>
-						</select><select name="to-1.5">
+						</select><select name="toy1">
 							<option value="2021">2021</option>
 							<option value="2020">2020</option>
 						</select></td>
-						<td><input type="text" class="addy" name="addy-1" placeholder="Street City State Zip"></td>
+						<td><input type="text" class="addy" name="add1" placeholder="Street City State Zip"></td>
 					</tr>
 					<tr class="text-center">
-						<td><select name="from-2">
+						<td><select name="fromm2">
 						<option value="January">Jan.</option>
 							<option value="February">Feb.</option>
 							<option value="March">Mar.</option>
@@ -315,11 +315,11 @@ echo $_SESSION['username'] ?? 'empty';
 							<option value="October">Oct.</option>
 							<option value="November">Nov.</option>
 							<option value="December">Dec.</option>
-						</select><select name="from-2.5">
+						</select><select name="fromy2">
 						<option value="2021">2021</option>
 							<option value="2020">2020</option>
 						</select></td>
-						<td><select name="to-2">
+						<td><select name="tom2">
 						<option value="January">Jan.</option>
 							<option value="February">Feb.</option>
 							<option value="March">Mar.</option>
@@ -332,14 +332,14 @@ echo $_SESSION['username'] ?? 'empty';
 							<option value="October">Oct.</option>
 							<option value="November">Nov.</option>
 							<option value="December">Dec.</option>
-						</select><select name="to-2.5">
+						</select><select name="toy2">
 						<option value="2021">2021</option>
 							<option value="2020">2020</option>
 						</select></td>
-						<td><input type="text" class="addy" name="addy-2" placeholder="Street City State Zip"></td>
+						<td><input type="text" class="addy" name="add2" placeholder="Street City State Zip"></td>
 					</tr>
 					<tr class="text-center">
-						<td><select name="from-3">
+						<td><select name="fromm3">
 						<option value="January">Jan.</option>
 							<option value="February">Feb.</option>
 							<option value="March">Mar.</option>
@@ -352,11 +352,11 @@ echo $_SESSION['username'] ?? 'empty';
 							<option value="October">Oct.</option>
 							<option value="November">Nov.</option>
 							<option value="December">Dec.</option>
-						</select><select name="from-3.5">
+						</select><select name="fromy3">
 						<option value="2021">2021</option>
 							<option value="2020">2020</option>
 						</select></td>
-						<td><select name="to-3">
+						<td><select name="tom3">
 						<option value="January">Jan.</option>
 							<option value="February">Feb.</option>
 							<option value="March">Mar.</option>
@@ -369,11 +369,11 @@ echo $_SESSION['username'] ?? 'empty';
 							<option value="October">Oct.</option>
 							<option value="November">Nov.</option>
 							<option value="December">Dec.</option>
-						</select><select name="to-3.5">
+						</select><select name="toy3">
 						<option value="2021">2021</option>
 							<option value="2020">2020</option>
 						</select></td>
-						<td><input type="text" class="addy" name="addy-3" placeholder="Street City State Zip"></td>
+						<td><input type="text" class="addy" name="add3" placeholder="Street City State Zip"></td>
 					</tr>
 					
 				</tbody>
@@ -381,13 +381,13 @@ echo $_SESSION['username'] ?? 'empty';
 		
 		<div>
 			<label for="parents"><b>5.</b> Parents' permanent address: </label>
-			<input type="text" id="parents" name="parentsAdd" required></input>
+			<input type="text" id="parents" name="parentsAdd"></input>
 		</div>
 		
 		<div class="radios">
 			<label for="age"><b>6.</b> Are you under the age of 18?</label>
-			<input type="radio" id="radio-1" name="under18" value="yes"> Yes
-			<input type="radio" id="radio-2" name="under18" value="no"> No	
+			<input type="radio" id="radio-1" name="under182" value="yes"> Yes
+			<input type="radio" id="radio-2" name="under182" value="no"> No	
 		</div>
 		
 		<div class="radios">
@@ -450,7 +450,7 @@ echo $_SESSION['username'] ?? 'empty';
 		
 		<div class="nav justify-content-center">
 			<label for="date">Date:</label>
-			<input type="text" name="currDate" required>	
+			<input type="text" name="esignDate" required>	
 		
 			<label for="signature">Student Signature:</label>
 			<input type="text" name="signature" required>	
