@@ -8,6 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Login Page</title>
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
         <!-- Google fonts -->
@@ -20,7 +21,7 @@ session_start();
     <section class="main">
         <div class="layer">
             <div class="content-w3ls">
-                <h1>Log in</h1>
+                <h1 class="heading">Log in</h1>
                 <form action="login.php" method="POST">
                     <div class="field-group">
                         <div class="wthree-field">
@@ -33,7 +34,7 @@ session_start();
                         </div>
                     </div>
                     <div class="wthree-field">
-                        <button name="login"  type="submit" class="btn">Get Started</button>
+                        <a name="login" href="" class="btn">Get Started</a>
                     </div>
                 </form>
                
@@ -44,4 +45,3 @@ session_start();
     
 </body>
 </html>
-
