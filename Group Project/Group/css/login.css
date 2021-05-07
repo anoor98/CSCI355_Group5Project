@@ -7,10 +7,11 @@ body{
     vertical-align: baseline;
     font-family: 'Mukta', sans-serif;
 }
-h1{
+.heading{
     text-align: center;
     font-size: 60px;
     color: rgb(219, 217, 217);
+    padding-bottom: 10%;
 }
 .main {
     background: url(../images/bg.jpeg) no-repeat center;
@@ -38,21 +39,140 @@ form .field-group {
 	border-radius: 35px;
 }
 
-.wthree-field button.btn {
-    background: #fc636b;
-    border: none;
-    color: #fff;
-    padding: 11px 15px;
-    text-transform: uppercase;
-	font-family: 'Mukta', sans-serif;
-    font-size: 16px;
-	width:100%;
-	margin-top:10px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.5s all;    
-	border-radius: 35px;
+
+a.btn {
+  width: 100%;
+  display: inline-block;
+  padding: .6em 1.1em;
+  font-size: 26px;
+  font-size: 1.625rem;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #fe4365;
+  border-radius: 35px;
+  -webkit-background-clip: padding-box;
+
+  -webkit-box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #fe4365;
+ 
+  border: none;
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition: box-shadow .3s;
 }
+a.btn:hover, a.btn:focus {
+  -webkit-box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #ff0364;
+  box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #ff0364;
+  -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+  transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+  -webkit-animation: gelatine 0.5s 1;
+  animation: gelatine 0.5s 1;
+}
+
+a.btn-secondary {
+  background: #c8c8a9;
+  -webkit-box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #c8c8a9;
+  box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #c8c8a9;
+}
+a.btn-secondary:hover {
+  -webkit-box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #bebe99;
+  box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #bebe99;
+}
+
+a.btn:active,
+a.btn-secondary:active {
+  background: #4ecdc4;
+  -webkit-transition-duration: 0;
+  transition-duration: 0;
+  -webkit-box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #3ac7bd;
+  box-shadow: 0 0 0 2px #cff09e, 0 0 0 4px #3ac7bd;
+}
+
+/**
+ * $keyframes \ gelatine 
+ **/
+@keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+@-webkit-keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+
 
 .wthree-field input {
     padding: 10px 0 10px 15px;
