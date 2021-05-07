@@ -5,6 +5,7 @@ CREATE TABLE LOGINS (
 	EMPLID INT(8) NOT NULL PRIMARY KEY,
 	FORM_STATUS varchar(40)
 );
+
 INSERT INTO LOGINS VALUES ('test', '1234', 'Student', '12345678', 'Not Submitted');
 INSERT INTO LOGINS VALUES ('Jon.Doe11@qmail.cuny.edu', '11111111', 'Student', '11111111', 'Not Submitted');
 INSERT INTO LOGINS VALUES ('Jane.Doe11@qmail.cuny.edu', '22222222', 'Student', '22222222', 'Not Submitted');
@@ -12,32 +13,79 @@ INSERT INTO LOGINS VALUES ('Zach.Gal33@qmail.cuny.edu', '33333333', 'Bursar', '3
 INSERT INTO LOGINS VALUES ('Zoe.Gal44@qmail.cuny.edu', '44444444', 'Bursar', '44444444', NULL);
 INSERT INTO LOGINS VALUES ('Zom.Bie55@qmail.cuny.edu', '55555555', 'Admin', '55555555', NULL);
 
-SELECT USERNAME, PASS_WORD FROM LOGINS;
+SELECT * FROM LOGINS;
 
 
 /*
 1 table for 3 different forms
 all connect with a foriegn key that connects to the student
 */
-drop table if exists PAGES;
+drop table if exists TEST;
 Create table TEST(
-	_FROMM1 varchar(15),
-    _FROMY1 int(4),
-    _TOM1 varchar(15),
-    _TOY1 int(4),
-    ADDY1 varchar(100)
+	-- PG 1
+    _NAME_ 				varchar(40) , 
+	EMPLID 					INT(8)  REFERENCES LOGINS,
+    IMMIGRATION_STATUS 			VARCHAR(30), 
+	UNDER_18 					varchar(8),
+    UNDER_23 					varchar(8),
+   STUDENT_TYPE 					nvarchar(15),
+   SEMESTER 				nvarchar(20),
+    REQUESTED_BY 				nvarchar(20) ,
+    _DATE_ 				nvarchar(20), 
+    -- PG 2
+    LAST_NAME 			varchar(50) ,
+    FIRST_NAME 			varchar(50) ,
+    MIDDLE_INITIAL 			varchar(1),
+    EMPLID2 					INT(8) ,
+    DOB 					varchar(20) ,
+    PHONE_NUMBER 			nvarchar(15), 
+    IS_CITIZEN 				varchar(3) ,
+    ALIEN 				varchar(3) ,
+    CURR_ADDRESS 		nvarchar(100), 
+    -- optional addresses
+--     _FROMM1 			varchar(15),
+--     _FROMY1 				int(4),
+--     _TOM1 					varchar(15),
+--     _TOY1 					int(4),
+--     ADDY1 				nvarchar(100)
+-- 	_FROMM2 				varchar(15),
+--     _FROMY2 				int(4),
+--     _TOM2 					varchar(15),
+--     _TOY2 				int(4),
+--     ADDY2 					nvarchar(100),
+--     _FROMM3 					varchar(15),
+--     _FROMY3 				int(4),
+--     _TOM3 				varchar(15),
+--     _TOY3 					int(4),
+--     ADDY3 					nvarchar(100)
+--     -- end optional addresses
+    PARENTS_ADD 			varchar(100),
+	LEGAL_GAURD_U18 		varchar(3) ,
+    IF_LEGAL_GAURD_YES 		varchar(3) ,
+    NameAAddress varchar(100) ,
+    SOURCE_OF_SUPPORT 		varchar(100) ,
+    TAX_RETURN12 		varchar(3) ,
+    FED_TAX12 			varchar(3) ,
+    FIN_AID 			varchar(3) ,
+    BENEFITS 		varchar(300),
+    LIVE_IN_NY 		varchar(3) ,
+    UNCERTAIN 		varchar(200),
+    ESIGN_DATE 			varchar(20) ,
+    ESIGN 			varchar(100)
 );
 select * from PAGES;
 select * from TEST;
+
+drop table PAGES;
 CREATE TABLE PAGES (	
 	-- PG 1
-    _NAME_ 				varchar(40) NOT NULL, 
+    _NAME_ 				varchar(40) NOT NULL PRIMARY KEY, 
 	EMPLID 					INT(8) NOT NULL REFERENCES LOGINS,
-    IMMIGRATION_STATUS 			VARCHAR(30) NOT NULL,
+    IMMIGRATION_STATUS 			VARCHAR(3) NOT NULL,
     -- FROM_DATE DATE Not Null,
     -- TO_DATE DATE Not NULL,
-    UNDER_18 					varchar(8),
-    UNDER_23 					varchar(8),
+    UNDER_18 					varchar(80),
+    UNDER_23 					varchar(80),
     STUDENT_TYPE 					varchar(15),
     SEMESTER 				nvarchar(20),
     REQUESTED_BY 				varchar(20) not null,
@@ -45,8 +93,8 @@ CREATE TABLE PAGES (
     -- PG 2
     LAST_NAME 			varchar(50) NOT NULL,
     FIRST_NAME 			varchar(50) NOT NULL,
-    MIDDLE_INITIAL 			varchar(1),
-    
+    MIDDLE_INITIAL 			varchar(10),
+    EMPLID2 					INT(80) NOT NULL,
     DOB 					varchar(20) NOT NULL,
     PHONE_NUMBER 			nvarchar(15) NOT NULL,
     IS_CITIZEN 				varchar(3) NOT NULL,
@@ -63,7 +111,7 @@ CREATE TABLE PAGES (
     _TOM2 					varchar(15),
     _TOY2 				int(4),
     ADDY2 					varchar(100),
-    _FROMM3 					varchar(15),
+    _FROMM3 					varchar(150),
     _FROMY3 				int(4),
     _TOM3 				varchar(15),
     _TOY3 					int(4),
@@ -83,4 +131,97 @@ CREATE TABLE PAGES (
     ESIGN_DATE 			varchar(20) not null,
     ESIGN 			varchar(100) NOT NULL
     );
+    
+    INSERT INTO  PAGES(_NAME_, 		
+                                        EMPLID, 		
+                                        IMMIGRATION_STATUS,
+                                        UNDER_18, 	
+                                        UNDER_23, 	
+                                        STUDENT_TYPE,
+                                        SEMESTER, 	
+                                        REQUESTED_BY,
+                                        _DATE_ ,		
+                                        LAST_NAME, 	
+                                        FIRST_NAME ,	
+                                        MIDDLE_INITIAL,
+                                        EMPLID2,
+                                        DOB,		
+                                        PHONE_NUMBER,
+                                        IS_CITIZEN, 	
+                                        ALIEN, 		
+                                        CURR_ADDRESS,
+                                        _FROMM1, 		
+                                        _FROMY1, 		
+                                        _TOM1, 			
+                                        _TOY1, 			
+                                        ADDY1 ,			
+                                        _FROMM2, 		
+                                        _FROMY2, 		
+                                        _TOM2, 			
+                                        _TOY2, 			
+                                        ADDY2, 			
+                                        _FROMM3, 		
+                                        _FROMY3, 		
+                                        _TOM3, 			
+                                        _TOY3, 			
+                                        ADDY3, 			
+                                        PARENTS_ADD, 	
+                                        LEGAL_GAURD_U18, 
+                                        IF_LEGAL_GAURD_YES,
+                                        NameAAddress,
+                                        SOURCE_OF_SUPPORT,
+                                        TAX_RETURN12, 	
+                                        FED_TAX12, 		
+                                        FIN_AID, 		
+                                        BENEFITS ,		
+                                        LIVE_IN_NY, 		
+                                        UNCERTAIN, 		
+                                        ESIGN_DATE,		
+                                        ESIGN) VALUES (' name',
+                                                        '12345678',
+                                                        'ims',
+                                                        'u18',
+                                                        'u23',
+                                                        'st',
+                                                        'seer',
+                                                        'requestDate',
+                                                        'DATE',
+                                                        'lname',
+                                                        'fname',
+                                                        'mn',
+                                                        '1242143',
+                                                        'DOB',
+                                                        'phone',
+                                                        'cit',
+                                                        'al',
+                                                        'currentAdd',
+                                                        'fromm1',
+                                                        '1234',
+                                                        'tom1',
+                                                        '1234',
+                                                        'add1',
+                                                        'fromm2',
+                                                        '1234',
+                                                        'tom2',
+                                                        '1123',
+                                                        'add2',
+                                                        'fromm3',
+                                                        '1234',
+                                                        'tom3',
+                                                        '1234',
+                                                        'add3',
+                                                        'parentsAdd',
+                                                        'uee',
+                                                        'gu',
+                                                        'naa',
+                                                        'sou',
+                                                        'res',
+                                                        'fe',
+                                                        'fi',
+                                                        'be',
+                                                        'li',
+                                                        'un',
+                                                        'es',
+                                                        'esign'
+                                                        )
 

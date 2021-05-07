@@ -222,7 +222,7 @@ echo $_SESSION['username'] ?? 'empty';
 					<!-- <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5"> -->
 					<div class="col-lg-4 col-12">
 						<label for="id">Student Id No.:</label>
-						<input name="Emplid" type="text" required>
+						<input name="Emplid2" type="text" required>
 					</div>
 
 					<div class="col-lg-4 col-12">

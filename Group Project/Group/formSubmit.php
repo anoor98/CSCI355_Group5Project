@@ -16,7 +16,7 @@ if (isset($_POST['submit'])){
         $lname = $_POST["lastName"];
         $fname = $_POST["firstName"];
         $mname = $_POST["mi"];
-        $emplid = $_POST["Emplid"];
+        $emplid2 = $_POST["Emplid2"];
         $DOB = $_POST["dob"];
         $phone = $_POST["phone"];
         $citizen= $_POST["citizen"];
@@ -65,8 +65,8 @@ if (isset($_POST['submit'])){
                                         _DATE_ ,		
                                         LAST_NAME, 	
                                         FIRST_NAME ,	
-                                        MIDDLE_INITI,
-
+                                        MIDDLE_INITIAL,
+                                        EMPLID2,
                                         DOB,		
                                         PHONE_NUMBER,
                                         IS_CITIZEN, 	
@@ -111,7 +111,7 @@ if (isset($_POST['submit'])){
                                                         '$lname',
                                                         '$fname',
                                                         '$mname',
-                                                        -- '$emplid',
+                                                        '$emplid2',
                                                         '$DOB',
                                                         '$phone',
                                                         '$citizen',
@@ -144,10 +144,15 @@ if (isset($_POST['submit'])){
                                                         '$live_in_ny',
                                                         '$uncertain',
                                                         '$esignDate',
-                                                        '$esign')";                
+                                                        '$esign'
+                                                        )";                
         $mysqli->query($sql);
         echo "hi";
         echo $username;
         echo $_SESSION['username'];
+}
+else{
+    header("Location: form.php");
+    exit();
 }
 ?>
