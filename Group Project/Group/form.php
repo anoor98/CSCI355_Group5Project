@@ -63,7 +63,7 @@ echo $_SESSION['username'] ?? 'empty';
 			<div class="nav justify-content-center">
 
 				Name: <input name="Name" type='text' style='border:none;border-bottom:black solid 1px' required>
-				Soc. Sec./Student I.D. No.<input name="Emplid" type='password' style='border:none;border-bottom:black solid 1px' required>
+				Soc. Sec./Student I.D. No.<input name="Emplid" type='password' maxlength="9" style='border:none;border-bottom:black solid 1px' required>
 
 			</div>
 
@@ -215,14 +215,14 @@ echo $_SESSION['username'] ?? 'empty';
 
 					<div class="col-lg-4 col-12">
 						<label for="middle">Middle Initial:</label>
-						<input name="mi" type="text">
+						<input name="mi" maxlength="1" type="text">
 					</div>
 					<!-- </div> -->
 
 					<!-- <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5"> -->
 					<div class="col-lg-4 col-12">
 						<label for="id">Student Id No.:</label>
-						<input name="Emplid" type="text" required>
+						<input name="Emplid" maxlength="8" type="text" required>
 					</div>
 
 					<div class="col-lg-4 col-12">
@@ -232,7 +232,7 @@ echo $_SESSION['username'] ?? 'empty';
 
 					<div class="col-lg-4 col-12">
 						<label for="phone">Phone Number:</label>
-						<input name="phone" type="text" required>
+						<input maxlength="10" placeholder="(No '-'s) ex:6462432765" name="phone" type="text" required>
 					</div>
 				</div>
 
