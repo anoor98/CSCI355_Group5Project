@@ -34,7 +34,7 @@ session_start();
                         </div>
                     </div>
                     <div class="wthree-field">
-                        <a name="login"  type="submit" class="btn"><button style="width: 100%; border:none; background:none; outline:none;"> Login </button></a>
+                        <a name="login"  type="submit" class="btn"><button name="login"  type="submit" style="width: 100%; border:none; background:none; outline:none;"> Login </button></a>
                     </div>
                 </form>
                
