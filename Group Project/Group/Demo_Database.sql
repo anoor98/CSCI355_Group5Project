@@ -4,13 +4,13 @@ CREATE TABLE LOGINS (
 	PASS_WORD varchar(40) NOT NULL, 
 	LOGIN_TYPE varchar(10) NOT NULL, 
 	EMPLID INT(8) NOT NULL PRIMARY KEY,
-	FORM_STATUS varchar(10)
+	FORM_STATUS varchar(20)
 );
 
-INSERT INTO LOGINS VALUES ('test', '1234', 'Student', '12345678', 'Not Submitted');
-INSERT INTO LOGINS VALUES ('Jon.Doe11@qmail.cuny.edu', '11111111', 'Student', '11111111', 'Not Submitted');
-INSERT INTO LOGINS VALUES ('Jane.Doe11@qmail.cuny.edu', '22222222', 'Student', '22222222', 'Not Submitted');
-INSERT INTO LOGINS VALUES ('Zach.Gal33@qmail.cuny.edu', '33333333', 'Bursar', '33333333', NULL);
+INSERT INTO LOGINS VALUES ('test', '1234', 'Student', '12345678', NULL);
+INSERT INTO LOGINS VALUES ('Jon.Doe11@qmail.cuny.edu', '11111111', 'Student', '11111111', NULL);
+INSERT INTO LOGINS VALUES ('ensar.dogrusoz20@qmail.cuny.edu', '1234', 'Student', '87654321', NULL);
+INSERT INTO LOGINS VALUES ('bursar@qmail.cuny.edu', '1234', 'Bursar', '13572466', NULL);
 INSERT INTO LOGINS VALUES ('Zoe.Gal44@qmail.cuny.edu', '44444444', 'Bursar', '44444444', NULL);
 INSERT INTO LOGINS VALUES ('testbursar', '1234', 'Bursar', '33333330', NULL);
 INSERT INTO LOGINS VALUES ('Zom.Bie55@qmail.cuny.edu', '55555555', 'Admin', '55555555', NULL);
