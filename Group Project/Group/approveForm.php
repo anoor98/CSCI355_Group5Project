@@ -5,12 +5,12 @@ require "connectDb.php";
 $EMPLID = $_GET['EMPLID'];
 if(isset($EMPLID) && !empty($EMPLID)){
     // Prepare a delete statement
-    $sql = "DELETE FROM LOGINS WHERE EMPLID = '$EMPLID'";
+    $sql = "UPDATE LOGINS SET FORM_STATUS = 'APPROVED' WHERE EMPLID = '$EMPLID'";
     $result = $mysqli->query($sql);
     // $data = $mysqli_query($mysqli,$sql);
     if($result){
     // Attempt to execute the prepared statement
-        header("location: adminTable.php");
+        header("location: facultyView.php");
         exit();
     } 
     else{

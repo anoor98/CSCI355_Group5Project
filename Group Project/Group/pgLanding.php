@@ -1,5 +1,7 @@
 <?php
 session_start();
+echo $_SESSION['username'];
+echo $_SESSION['login_type'];
 ?>
 <!DOCTYPE html>
   <html>
@@ -18,10 +20,32 @@ session_start();
       <div>
         <!-- navbar -->
         <div class="topnav" id="myTopnav">
-          <a href="" class="active">Home</a>
-          <a href="form.php">Fill Form</a>
+          <a href="pgLanding.php" class="active">Home</a>
+          <!-- <a href="form.php">Fill Form</a>
           <a href="adminTable.php">Database</a>
-          <a href="facultyView.php">Form Approvals</a>
+          <a href="facultyView.php">Form Approvals</a> -->
+          <?php
+          if (isset($_SESSION['login_type'])){
+            if($_SESSION['login_type'] == 'Student'){
+            echo "<a href='form.php'>Fill Form</a>";
+            }
+            
+          }
+          if (isset($_SESSION['login_type'])){
+            
+            if ($_SESSION['login_type'] == 'Bursar'){
+              echo "<a href='facultyView.php'>Form Approvals</a>";
+            }
+        
+          }
+          if (isset($_SESSION['login_type'])){
+
+            if ($_SESSION['login_type'] =='Admin'){
+              echo "<a href='adminTable.php'>Database</a>";
+            }
+          }
+        
+        ?>
           <a href="logout.php">Logout</a>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -40,11 +64,28 @@ session_start();
 
           
         <div>
-        <a href="form.php"><button class="button button1">Student: Fill out form</button></a>
+        <?php
+          if (isset($_SESSION['login_type'])){
+            if($_SESSION['login_type'] == 'Student'){
+              echo "<a href='form.php'><button class='button button1'>Student: Fill out form</button></a>";
+            }
+          }
+          if (isset($_SESSION['login_type'])){
+            if($_SESSION['login_type'] == 'Bursar'){
+              echo "<a href='facultyView.php'><button class='button button1'>Bursar: View Forms</button></a>";
+            }
+            
+          }
+          if (isset($_SESSION['login_type'])){
+            if ($_SESSION['login_type'] == 'Admin'){
+              echo "<a href='adminTable.php'><button  class='button button3'>Admin: View database</button></a>";
+            }
+          }
 
-        <button class="button button2">Registrar: View forms</button>
+        ?>
         
-        <a href="adminTable.php"><button  class="button button3">Admin: View database</button></a>
+        
+        
         </div>
 
         <div class="footer">

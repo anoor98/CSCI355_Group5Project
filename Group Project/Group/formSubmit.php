@@ -1,6 +1,7 @@
 <?php
+session_start();
 if (isset($_POST['submit'])){
-        session_start();
+        
         require 'connectDb.php';
 
         $name = $_POST["Name"];

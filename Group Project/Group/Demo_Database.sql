@@ -1,9 +1,10 @@
+drop table LOGINS;
 CREATE TABLE LOGINS (	
     USERNAME varchar(60) NOT NULL, 
 	PASS_WORD varchar(40) NOT NULL, 
-	LOGIN_TYPE varchar(40) NOT NULL, 
+	LOGIN_TYPE varchar(10) NOT NULL, 
 	EMPLID INT(8) NOT NULL PRIMARY KEY,
-	FORM_STATUS varchar(40)
+	FORM_STATUS varchar(10)
 );
 
 INSERT INTO LOGINS VALUES ('test', '1234', 'Student', '12345678', 'Not Submitted');
@@ -23,7 +24,7 @@ all connect with a foriegn key that connects to the student
 */
 
 select * from PAGES;
-
+drop table PAGES;
 CREATE TABLE PAGES (	
 	-- PG 1
     	-- PG 1

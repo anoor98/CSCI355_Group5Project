@@ -8,14 +8,34 @@ session_start();
 <head>
 	<title>Student Residency Form</title>
 	<link rel="stylesheet" href="css/newpg1.css">
+	<link rel="stylesheet" href="css/pgLanding.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- navbar -->
 
 	<div class="topnav" id="myTopnav">
 		<a href="pgLanding.php" class="">Home</a>
-		<a href="form.php">Fill Form</a>
-		<a href="adminTable.php">Database</a>
-		<a href="facultyView.php">Form Approvals</a>
+		<?php
+          if (isset($_SESSION['login_type'])){
+            if($_SESSION['login_type'] == 'Student'){
+            echo "<a href='form.php'>Fill Form</a>";
+            }
+            
+          }
+          if (isset($_SESSION['login_type'])){
+            
+            if ($_SESSION['login_type'] == 'Bursar'){
+              echo "<a href='facultyView.php'>Form Approvals</a>";
+            }
+        
+          }
+          if (isset($_SESSION['login_type'])){
+
+            if ($_SESSION['login_type'] =='Admin'){
+              echo "<a href='adminTable.php'>Database</a>";
+            }
+          }
+        
+        ?>
 		<a href="logout.php">Logout</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 			<i class="fa fa-bars"></i>
@@ -520,5 +540,7 @@ session_start();
 	</div>
 	</form>
 	</div>
+	<script src="index.js"></script>
 
 </body>
+</html>

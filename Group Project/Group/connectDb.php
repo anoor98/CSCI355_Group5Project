@@ -1,5 +1,5 @@
 <?php
-
+session_start();
         $host = "mars.cs.qc.cuny.edu";
         $dbUsername = "doen5420"; 
         $dbPassword = "23665420";
